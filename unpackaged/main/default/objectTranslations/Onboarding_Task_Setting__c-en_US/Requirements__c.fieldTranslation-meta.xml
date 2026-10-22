@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Determine which requirements are populated; used for automating --></help>
+        <label><!-- Requirements --></label>
+        <name>Requirements__c</name>
+    </CustomFieldTranslation>

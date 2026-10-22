@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lab_Source__c</fullName>
+    <description>[PORTAL] Synced to Incisive Portal, resolved to lab_practice_mappings.lab_id. Confirm with RevOps before changing.</description>
+    <label>Lab Source</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>This must be an account marked as a Lab</errorMessage>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Lab</value>
+        </filterItems>
+        <infoMessage>This must be an account marked as a Lab</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>This Lab&#39;s Practice IDs</relationshipLabel>
+    <relationshipName>LabsPracticeIDs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

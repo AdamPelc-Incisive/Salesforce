@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.OpportunityLineItems.Pending_Devices__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems.Pending_Devices__r$Assigned_Asset__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems.Pending_Devices__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems.Pending_Devices__r$Scanner_Maturity__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$IsWon</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Ordered Scanners w/Maturity</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_Products_with_Pending_Devices__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.OpportunityLineItems.Pending_Devices__r$Status__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

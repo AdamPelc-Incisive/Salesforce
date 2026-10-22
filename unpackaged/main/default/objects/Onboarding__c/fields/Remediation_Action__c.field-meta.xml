@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remediation_Action__c</fullName>
+    <inlineHelpText>The remediation action committed to for this account.</inlineHelpText>
+    <label>Remediation Action</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lab network change</fullName>
+                <default>false</default>
+                <label>Lab network change</label>
+            </value>
+            <value>
+                <fullName>Workflow intervention / re-training</fullName>
+                <default>false</default>
+                <label>Workflow intervention / re-training</label>
+            </value>
+            <value>
+                <fullName>Hardware swap or repair</fullName>
+                <default>false</default>
+                <label>Hardware swap or repair</label>
+            </value>
+            <value>
+                <fullName>Custom pricing adjustment</fullName>
+                <default>false</default>
+                <label>Custom pricing adjustment</label>
+            </value>
+            <value>
+                <fullName>Minimum waiver (1 quarter)</fullName>
+                <default>false</default>
+                <label>Minimum waiver (1 quarter)</label>
+            </value>
+            <value>
+                <fullName>Relationship escalation</fullName>
+                <default>false</default>
+                <label>Relationship escalation</label>
+            </value>
+            <value>
+                <fullName>Account plan reset</fullName>
+                <default>false</default>
+                <label>Account plan reset</label>
+            </value>
+            <value>
+                <fullName>Onboarding redo</fullName>
+                <default>false</default>
+                <label>Onboarding redo</label>
+            </value>
+            <value>
+                <fullName>Credit / billing adjustment</fullName>
+                <default>false</default>
+                <label>Credit / billing adjustment</label>
+            </value>
+            <value>
+                <fullName>No remediation - escalate to Cancel</fullName>
+                <default>false</default>
+                <label>No remediation - escalate to Cancel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

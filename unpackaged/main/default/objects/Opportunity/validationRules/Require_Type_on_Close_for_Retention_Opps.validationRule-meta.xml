@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Type_on_Close_for_Retention_Opps</fullName>
+    <active>true</active>
+    <description>Opportunity Type is required for Retention opps</description>
+    <errorConditionFormula>AND(
+    RecordType.Name = &quot;Retention&quot;,
+    OR(
+        ISPICKVAL(StageName, &quot;Closed Won&quot;),
+        ISPICKVAL(StageName, &quot;Closed Lost&quot;)
+    ),
+    ISPICKVAL(Type, &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please specify a Type when closing a retention opp.</errorMessage>
+</ValidationRule>

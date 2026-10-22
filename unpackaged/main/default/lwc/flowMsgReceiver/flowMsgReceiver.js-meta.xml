@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+
+            <!-- Filters -->
+            <property name="filterByAction"    type="String"  label="Filter by Action"      description="Only receive messages matching this action. Leave blank for all." />
+            <property name="filterBySessionId" type="String"  label="Filter by Session ID"   description="Only receive messages matching this session ID. Leave blank for all." />
+            <property name="ignoreAction"      type="String"  label="Ignore Action"          description="Ignore messages matching this action (e.g. a refresh broadcast this same flow published). Leave blank to ignore none." />
+            <property name="autoNavigate"      type="Boolean" label="Auto-Navigate on Receive" description="Automatically advance to the next screen when a message is received. Default: false." default="false" />
+            <property name="allowRepeatMessages" type="Boolean" label="Allow Repeat Messages"    description="By default a repeat of the last identical message is suppressed. Set true when the same message should re-fire a reaction such as an in-place refresh. Default: false." default="false" />
+
+            <!-- Outputs -->
+            <property name="receivedRecordId"  type="String"  label="OUT - Record ID"        description="Record ID from the received message." />
+            <property name="receivedAction"    type="String"  label="OUT - Action"            description="Action from the received message." />
+            <property name="receivedSessionId" type="String"  label="OUT - Session ID"        description="Session ID from the received message." />
+            <property name="receivedStatus"    type="String"  label="OUT - Status"            description="Status from the received message." />
+            <property name="messageReceived"   type="Boolean" label="OUT - Message Received"  description="True once a message has been received." />
+            <property name="receivedCount"     type="Integer" label="OUT - Received Count"    description="Increments on every accepted message. Use as a reactive trigger source for screen actions (in-place refresh)." />
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveAnalyticAssetCollection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <collectionType>static</collectionType>
+    <color>#1b96ff</color>
+    <folder>Onboarding</folder>
+    <items>
+        <asset>Onboarding_Review_MC</asset>
+        <assetType>Report</assetType>
+        <sortOrder>499</sortOrder>
+    </items>
+    <items>
+        <asset>Onboardings_with_Milestones_8Pl</asset>
+        <assetType>Report</assetType>
+        <sortOrder>498</sortOrder>
+    </items>
+    <items>
+        <asset>Onboarding_Overview_with_Devices_R7j</asset>
+        <assetType>Report</assetType>
+        <sortOrder>497</sortOrder>
+    </items>
+    <items>
+        <asset>Copy_of_Onboardings_with_Milestones</asset>
+        <assetType>Report</assetType>
+        <sortOrder>496</sortOrder>
+    </items>
+    <label>Onboarding</label>
+    <masterLabel>Onboarding</masterLabel>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>michael@joinincisive.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+</WaveAnalyticAssetCollection>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Credits the owner as the sales rep. Before-save, so this is a field set on $Record with no extra update.</description>
+        <name>Set_Sales_Rep_To_Owner</name>
+        <label>Set Sales Rep to Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sales_Rep__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Stamp only for New Sales and Expansion opportunities owned by a user in the Sales or Sales Leadership role (sales reps, including Tyler Shores). Owners in CS, CS Leadership, an admin, or no role are left blank for the BDR to fill in.</description>
+        <name>Is_Sales_Role_Owner</name>
+        <label>Is Sales Role Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Leave Blank</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Sales_Role_Deal</name>
+            <conditionLogic>(1 OR 4) AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Owner_Role.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Record_Type.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Record_Type.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expansion</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Owner_Role.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Leadership</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Sales_Rep_To_Owner</targetReference>
+            </connector>
+            <label>Yes Sales Role Deal</label>
+        </rules>
+    </decisions>
+    <description>When an opportunity moves to Closed Won with Sales Rep blank, sets Sales Rep to the owner if the owner is in the Sales or Sales Leadership role and the record type is New Sales or Expansion. Any other owner (CS, CS Leadership, admin, no role) is left blank for the BDR to fill in. Before-save, so no extra update; a failed lookup just leaves Sales Rep blank.
+2026-10-13: AP - OPS-387: Created.
+2026-10-13: AP - OPS-387: Sales Leadership owners (Tyler Shores) are now stamped too: the owner role check is Sales OR Sales Leadership.</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Before - Stamp Sales Rep on Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Before - Stamp Sales Rep on Closed Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>The role of the opportunity owner, to check for the Sales or Sales Leadership role. If the owner has no role or a lookup fails, the flow ends and Sales Rep stays blank.</description>
+        <name>Get_Owner_Role</name>
+        <label>Get Owner Role</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Owner_User.UserRoleId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>UserRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>The opportunity owner, to read their role.</description>
+        <name>Get_Owner_User</name>
+        <label>Get Owner User</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Owner_Role</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>The opportunity&#39;s record type name. The Record_Type_Name__c formula field is not supported in a before-save flow, so the record type is looked up from RecordTypeId.</description>
+        <name>Get_Record_Type</name>
+        <label>Get Record Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Sales_Role_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RecordTypeId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Owner_User</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Sales_Rep__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

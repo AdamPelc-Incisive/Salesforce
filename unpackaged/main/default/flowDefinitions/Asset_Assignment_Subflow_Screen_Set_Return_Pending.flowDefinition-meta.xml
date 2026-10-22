@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>12</activeVersionNumber>
+    <description>Screen subflow used when an asset return is processed or moved back to inventory.
+Move to Inventory hops through Returned (to snapshot assignment history) then Inventory (wipe lifecycle fields except First Stage Date). Retire remains a single-step status change.
+
+2026-08-12: Move to Inventory now stamps Status=Returned and Return_Date__c first (practice account and lifecycle fields still populated), then a second DML sets Status=Inventory, moves Account to Inventory Account, clears Parent, and wipes assignment lifecycle fields except First_Stage_Date__c. Return Date lives on the Returned assignment only.</description>
+    <masterLabel>Asset Assignment Subflow - Screen - Process Pending Returns</masterLabel>
+</FlowDefinition>

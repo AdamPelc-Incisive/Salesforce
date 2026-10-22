@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipment_Type__c</fullName>
+    <description>[PORTAL] Synced to Incisive Portal (equipment.type). Confirm with RevOps before changing or deleting.</description>
+    <label>Equipment Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ICAM</fullName>
+                <default>false</default>
+                <label>ICAM</label>
+            </value>
+            <value>
+                <fullName>Medit</fullName>
+                <default>false</default>
+                <label>Medit</label>
+            </value>
+            <value>
+                <fullName>Trios 3</fullName>
+                <default>false</default>
+                <label>Trios 3</label>
+            </value>
+            <value>
+                <fullName>Trios 4</fullName>
+                <default>false</default>
+                <label>Trios 4</label>
+            </value>
+            <value>
+                <fullName>Trios 5</fullName>
+                <default>false</default>
+                <label>Trios 5</label>
+            </value>
+            <value>
+                <fullName>Trios Core</fullName>
+                <default>false</default>
+                <label>Trios Core</label>
+            </value>
+            <value>
+                <fullName>SprintRay Pro2</fullName>
+                <default>false</default>
+                <label>SprintRay Pro2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

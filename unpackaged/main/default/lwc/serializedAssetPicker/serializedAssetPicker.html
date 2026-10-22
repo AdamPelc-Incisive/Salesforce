@@ -1,0 +1,48 @@
+<template>
+    <template if:true={hasGroups}>
+        <template for:each={groups} for:item="group">
+            <div key={group.productId} style="border: 1px solid #dddbda; border-radius: 4px; margin-bottom: 16px; overflow: hidden;">
+                <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate" style="background-color: #f3f3f3; border-bottom: 1px solid #dddbda; padding: 8px 12px;">
+                    <h2 class="slds-truncate" style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #3e3e3c;">
+                        {group.productName}
+                        <template if:true={group.isRequiredNow}>
+                            <span style="background-color: #0176d3; color: white; border-radius: 4px; padding: 2px 8px; font-size: 12px; font-weight: 600;">{group.quantityNeeded} Required</span>
+                        </template>
+                        <template if:false={group.isRequiredNow}>
+                            <span style="background-color: #dddbda; color: #3e3e3c; border-radius: 4px; padding: 2px 8px; font-size: 12px; font-weight: 600;">Optional</span>
+                        </template>
+                    </h2>
+                    <div class="slds-no-flex">
+                        <lightning-input
+                            type="search"
+                            placeholder="Search this list..."
+                            value={group.searchTerm}
+                            onchange={handleSearch}
+                            data-product-id={group.productId}
+                            variant="label-hidden"
+                            label="Search">
+                        </lightning-input>
+                    </div>
+                </div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={group.filteredAssets}
+                    columns={columns}
+                    selected-rows={group.selectedRows}
+                    max-row-selection={group.quantityNeeded}
+                    onrowselection={handleRowSelection}
+                    data-product-id={group.productId}>
+                </lightning-datatable>
+                <template if:true={group.selectionError}>
+                    <p class="slds-text-color_error slds-m-around_small">
+                        Please select exactly {group.quantityNeeded} item(s).
+                    </p>
+                </template>
+            </div>
+        </template>
+    </template>
+
+    <template if:false={hasGroups}>
+        <p class="slds-text-color_weak">No serialized assets to display.</p>
+    </template>
+</template>

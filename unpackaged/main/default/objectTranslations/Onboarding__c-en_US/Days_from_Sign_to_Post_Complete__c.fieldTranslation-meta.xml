@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Post Training Completed Date - Sign Date --></help>
+        <label><!-- Days from Sign to Post Complete --></label>
+        <name>Days_from_Sign_to_Post_Complete__c</name>
+    </CustomFieldTranslation>

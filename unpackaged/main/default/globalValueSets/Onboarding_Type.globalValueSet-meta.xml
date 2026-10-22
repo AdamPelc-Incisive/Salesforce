@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New Sale</fullName>
+        <default>true</default>
+        <label>New Sale</label>
+    </customValue>
+    <customValue>
+        <fullName>Exchange</fullName>
+        <default>false</default>
+        <label>Exchange</label>
+    </customValue>
+    <customValue>
+        <fullName>Scanner Downgrade</fullName>
+        <default>false</default>
+        <label>Scanner Downgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Scanner Downgrade</fullName>
+        <default>false</default>
+        <label>Non-Scanner Downgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Churn</fullName>
+        <default>false</default>
+        <label>Churn</label>
+    </customValue>
+    <customValue>
+        <fullName>New Scanner</fullName>
+        <default>false</default>
+        <label>New Scanner</label>
+    </customValue>
+    <customValue>
+        <fullName>Scanner Upgrade</fullName>
+        <default>false</default>
+        <label>Scanner Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>RCA</fullName>
+        <default>false</default>
+        <label>RCA</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Downgrade</label>
+    </customValue>
+    <description>Different types of onboardings</description>
+    <masterLabel>Onboarding Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

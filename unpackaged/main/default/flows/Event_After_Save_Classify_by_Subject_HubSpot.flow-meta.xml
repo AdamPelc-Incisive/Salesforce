@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Needs_CS_Update</name>
+        <label>Needs CS Update?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Needed2</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Category__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Followup Call</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>012cv000001NhQHAA0</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CS_Event_RT_Follow_up_Category</targetReference>
+            </connector>
+            <label>Update Needed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Needs_Sales_Update</name>
+        <label>Needs Sales Update?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Not Needed</defaultConnectorLabel>
+        <rules>
+            <name>Update_Needed1</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>012cv000001NhN3AAK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Category__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Demo</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sales_Event_RT_SD_Category</targetReference>
+            </connector>
+            <label>Update Needed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Route_By_Subject</name>
+        <label>Route By Subject &amp; Role</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Needs_CS_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>CS Event</defaultConnectorLabel>
+        <rules>
+            <name>Sales_Event</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>fIsSalesEvent</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Needs_Sales_Update</targetReference>
+            </connector>
+            <label>Sales Event</label>
+        </rules>
+        <rules>
+            <name>Training</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>fIsTraining</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Training_Needed</targetReference>
+            </connector>
+            <label>Training</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Training_Needed</name>
+        <label>Needs Training Update?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Not Needed</defaultConnectorLabel>
+        <rules>
+            <name>Update_Needed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>012cv000001NhQHAA0</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Category__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Training Call</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CS_Event_RT_Training_Category</targetReference>
+            </connector>
+            <label>Update Needed</label>
+        </rules>
+    </decisions>
+    <description>Classifies HubSpot-created Events by Subject keywords or user Role to automatically assign the correct Record Type (Sales or CS) and Category. Runs on create and when Subject changes for integration-user events only.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fIsSalesEvent</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!fSubjectLower}, &quot;sales&quot;) ||
+CONTAINS({!fSubjectLower}, &quot;demo&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>fIsTraining</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!fSubjectLower}, &quot;training&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>fSubjectLower</name>
+        <dataType>String</dataType>
+        <expression>LOWER($Record.Subject)</expression>
+    </formulas>
+    <interviewLabel>Event – After Save – Classify by Subject (HubSpot) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event – After Save – Classify by Subject (HubSpot)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>CS_Event_RT_Follow_up_Category</name>
+        <label>CS Event RT + Follow-up Category</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Category__c</field>
+            <value>
+                <stringValue>Followup Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012cv000001NhQHAA0</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>CS_Event_RT_Training_Category</name>
+        <label>CS Event RT - Training Category</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Category__c</field>
+            <value>
+                <stringValue>Training Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012cv000001NhQHAA0</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Sales_Event_RT_SD_Category</name>
+        <label>Sales Event RT + SD Category</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Category__c</field>
+            <value>
+                <stringValue>Sales Demo</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012cv000001NhN3AAK</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Route_By_Subject</targetReference>
+        </connector>
+        <filterFormula>AND(
+  {!$Record.CreatedById} = &quot;005ao000008Hf5NAAS&quot;,
+  NOT(ISBLANK({!$Record.Subject})),
+  OR(
+    ISNEW(),
+    ISCHANGED({!$Record.Subject})
+  )
+)</filterFormula>
+        <object>Event</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

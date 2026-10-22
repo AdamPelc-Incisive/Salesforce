@@ -1,0 +1,91 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="combo-input">
+            <template if:true={required}>
+                <abbr class="slds-required" title="required">*</abbr>
+            </template>
+            {label}
+        </label>
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input
+                            id="combo-input"
+                            type="text"
+                            class="slds-input"
+                            placeholder="Search or add new…"
+                            value={accountName}
+                            oninput={handleInput}
+                            onblur={handleBlur}
+                            autocomplete="off" />
+                        <template if:true={isSearching}>
+                            <div class="slds-input__icon-group slds-input__icon-group_right">
+                                <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner">
+                                    <span class="slds-assistive-text">Searching</span>
+                                    <div class="slds-spinner__dot-a"></div>
+                                    <div class="slds-spinner__dot-b"></div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <template if:true={showDropdown}>
+                        <div class="slds-dropdown slds-dropdown_length-7 slds-dropdown_fluid" role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                <template for:each={results} for:item="row">
+                                    <li
+                                        key={row.id}
+                                        role="presentation"
+                                        class="slds-listbox__item"
+                                        data-id={row.id}
+                                        onmousedown={handleSelect}>
+                                        <div class="slds-media slds-media_center slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                            <span class="slds-media__figure slds-listbox__option-icon option-icon">
+                                                <lightning-icon icon-name="standard:account" size="small" alternative-text="Account"></lightning-icon>
+                                            </span>
+                                            <span class="slds-media__body">
+                                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+                                                    <span class="account-name">{row.name}</span>
+                                                    <template if:true={row.hasBadge}>
+                                                        <span class={row.badgeClass}>{row.typeLabel}</span>
+                                                    </template>
+                                                </span>
+                                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{row.meta}</span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <template if:true={hasSelection}>
+            <div class="slds-box slds-box_x-small slds-m-top_x-small slds-theme_shade">
+                <p>
+                    <lightning-icon icon-name="utility:warning" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                    <strong>This practice already exists:</strong> {selectedAccountName}. No new Account will be created.
+                </p>
+                <div class="slds-m-top_x-small">
+                    <lightning-button
+                        variant="brand"
+                        label="View Account"
+                        title="Open the existing Account"
+                        icon-name="utility:new_window"
+                        onclick={handleView}>
+                    </lightning-button>
+                    <a onclick={handleClear} class="slds-m-left_small">Clear &amp; create new instead</a>
+                </div>
+            </div>
+        </template>
+
+        <template if:true={noMatchesHint}>
+            <div class="slds-text-color_success slds-text-body_small slds-m-top_xxx-small">
+                No existing accounts match “{accountName}”. A new Account will be created.
+            </div>
+        </template>
+    </div>
+</template>

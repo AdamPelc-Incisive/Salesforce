@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Shipping_Address_CW</fullName>
+    <active>true</active>
+    <description>OPS-240. Blocks Closed Won when a practice-level Account has an incomplete Shipping Address. Scoped to Account_Level__c = Practice because hardware ships to a clinic, not a corp. Inert while the field is blank.</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(StageName, &quot;Closed Won&quot;),
+  TEXT(Account.Account_Level__c) = &quot;Practice&quot;,
+  OR(
+    ISBLANK(Account.ShippingStreet),
+    ISBLANK(Account.ShippingCity),
+    ISBLANK(Account.ShippingState),
+    ISBLANK(Account.ShippingPostalCode)
+  )
+)</errorConditionFormula>
+    <errorMessage>Cannot mark Closed Won: the Account is missing a complete Shipping Address (Street, City, State and/or Zip). Add it on the Close screen, or update the Account directly.</errorMessage>
+</ValidationRule>

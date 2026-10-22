@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Use to trigger flow that sets related hardware to Deployed --></help>
+        <label><!-- Set Related Hardware to Deployed --></label>
+        <name>Set_Related_Hardware_to_Deployed__c</name>
+    </CustomFieldTranslation>

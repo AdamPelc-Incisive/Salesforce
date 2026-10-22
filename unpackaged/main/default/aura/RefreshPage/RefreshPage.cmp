@@ -1,0 +1,6 @@
+<aura:component implements="lightning:availableForFlowActions" 
+                description="Performs a soft refresh of the current page">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    
+</aura:component>

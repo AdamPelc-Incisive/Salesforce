@@ -1,0 +1,85 @@
+<apex:page id="CleanUp" controller="pandadoc.CleanUpCtrl" title="PandaDoc cleanup config">
+    <apex:form >
+        <apex:actionFunction action="{!generateBehaviorString}" reRender="behaviorText" name="rendBehavior"/>
+    <apex:pageBlock title="Cleanup settings">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="Save" />
+            <apex:commandButton action="{!saveAndSchedule}" value="Save and schedule" />
+            <apex:commandButton action="{!saveAndExecute}" value="Save schedule and execute" />
+            <apex:commandButton rendered="{!retUrlExist}" value="Back" action="{!getBack}" />
+        </apex:pageBlockButtons>
+        <apex:pageMessages />
+        <apex:pageMessage summary="{!expectedBehavior}" severity="info" strength="2" id="behaviorText"/>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Cleanup mode" for="mode">
+                    <c:helpIcon width="330px" text="Full history - will remove all document statuses + stause's attachments" />
+                </apex:outputLabel>
+                <apex:selectList value="{!settings.cleanMode}" multiSelect="false" size="1" onChange="rendBehavior();">
+                    <apex:selectOptions value="{!modes}" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Older then" for="days" />
+                <apex:selectList value="{!settings.daysAfterCreating}" size="1" multiSelect="false" onChange="rendBehavior();">
+                    <apex:selectOptions value="{!daysAfterCreatingSelect}" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Current status">
+                    <c:helpIcon width="235px" text="Document status which will be applied for Cleanup" />
+                </apex:outputLabel>
+                <apex:selectList value="{!documentStatusSelectValue}" size="1" multiSelect="false" onChange="rendBehavior();">
+                    <apex:selectOptions value="{!documentStatusSelect}" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem onDataclick="callDelay.delay(rendBehavior);">
+                <apex:outputLabel value="Documents statuses">
+                    <c:helpIcon width="233px" text="Document history statuses that will be cleaned up"/>
+                </apex:outputLabel>
+                <c:CheckBoxList checkBoxes="{!cleanUpForVersionStatuses}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Cleanup schedule" />
+                <apex:selectList value="{!settings.cronString}" size="1" multiSelect="false" onChange="rendBehavior();">
+                    <apex:selectOptions value="{!schedulerPeriods}" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="Cleanup status" id="cleanupStatus">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!refreshStatus}" value="Refresh" reRender="cleanupStatus"/>
+            <apex:commandButton action="{!stopScheduling}" value="Stop scheduling" disabled="{!scheduleJobDetail == null}" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection rendered="{!scheduleJobDetail != null}" title="Scheduler status">
+            <apex:outputField value="{!scheduleJobDetail.PreviousFireTime}" />
+            <apex:outputField value="{!scheduleJobDetail.NextFireTime}" />
+            <apex:outputField value="{!scheduleJobDetail.State}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!scheduleJobDetail == null}" title="Scheduler status">
+            <apex:outputText value="Cleanup not scheduled" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!batchJobDetail != null}" title="Batch status">
+            <apex:outputField value="{!batchJobDetail.Status}" />
+            <apex:outputField value="{!batchJobDetail.CompletedDate}" />
+            <apex:outputField value="{!batchJobDetail.TotalJobItems}" />
+            <apex:outputField value="{!batchJobDetail.JobItemsProcessed}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!batchJobDetail == null}" title="Batch status">
+            <apex:outputText value="Cleanup not executed" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+
+    <script>
+        var callDelay = {
+            delay: function(callback) {
+                if (this.timeout) {
+                    window.clearTimeout(this.timeout);
+                }
+                this.timeout = window.setTimeout(callback, 1500);
+            }
+        }
+    </script>
+</apex:page>

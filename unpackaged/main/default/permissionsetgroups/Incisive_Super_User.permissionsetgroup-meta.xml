@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Enhanced permissions for custom objects and other abilities</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Incisive Super User</label>
+    <permissionSets>CS_Task_Product_Bundle_Settings</permissionSets>
+    <permissionSets>Create_Edit_Lab_Accounts</permissionSets>
+    <permissionSets>Delete_Opportunities</permissionSets>
+    <permissionSets>Generate_Account_IDs</permissionSets>
+    <permissionSets>LabID_Modify_All</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,23 @@
+<apex:page controller="pandadoc.ChangeOpportunityStatusSettingCtrl" title="Opportunity status mapping">
+    <apex:slds />
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/configureOppStatusTrigger.js')}" />
+
+    <apex:form >
+        <apex:actionFunction name="getBack" action="{!getBack}" />
+    </apex:form>
+
+    <div id="approot"></div>
+    <script>
+        window.__initial_state__ = JSON.parse('{!JSENCODE(initialState)}');
+        window.__global_config__ = {
+            slds_assets: '{!JSENCODE(URLFOR($Asset.SLDS))}',
+            cancel_method: getBack,
+            opportunityStatuses: JSON.parse('{!JSENCODE(opportunityStatuses)}'),
+            pandaStatuses: JSON.parse('{!JSENCODE(pandaDocStatuses)}'),
+        }
+        window.__remote_actions__ = {
+            'saveMappings': '{!$RemoteAction.ChangeOpportunityStatusSettingCtrl.saveMappings}',
+            'getTemplateLabels': '{!$RemoteAction.ChangeOpportunityStatusSettingCtrl.getTemplateLabels}'
+        };
+    </script>
+</apex:page>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Alabama</masterLabel>
+        <translation>Alabama</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alaska</masterLabel>
+        <translation>Alaska</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alberta</masterLabel>
+        <translation>Alberta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arizona</masterLabel>
+        <translation>Arizona</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arkansas</masterLabel>
+        <translation>Arkansas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>British Columbia</masterLabel>
+        <translation>British Columbia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>California</masterLabel>
+        <translation>Californien</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Colorado</masterLabel>
+        <translation>Colorado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Connecticut</masterLabel>
+        <translation>Connecticut</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delaware</masterLabel>
+        <translation>Delaware</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>District of Columbia</masterLabel>
+        <translation>District of Columbia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Florida</masterLabel>
+        <translation>Florida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Georgia</masterLabel>
+        <translation>Georgia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hawaii</masterLabel>
+        <translation>Hawaii</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Idaho</masterLabel>
+        <translation>Idaho</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Illinois</masterLabel>
+        <translation>Illinois</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Indiana</masterLabel>
+        <translation>Indiana</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Iowa</masterLabel>
+        <translation>Iowa</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kansas</masterLabel>
+        <translation>Kansas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kentucky</masterLabel>
+        <translation>Kentucky</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Louisiana</masterLabel>
+        <translation>Louisiana</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maine</masterLabel>
+        <translation>Maine</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Manitoba</masterLabel>
+        <translation>Manitoba</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maryland</masterLabel>
+        <translation>Maryland</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Massachusetts</masterLabel>
+        <translation>Massachusetts</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Michigan</masterLabel>
+        <translation>Michigan</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Minnesota</masterLabel>
+        <translation>Minnesota</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mississippi</masterLabel>
+        <translation>Mississippi</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Missouri</masterLabel>
+        <translation>Missouri</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Montana</masterLabel>
+        <translation>Montana</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nebraska</masterLabel>
+        <translation>Nebraska</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nevada</masterLabel>
+        <translation>Nevada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Brunswick</masterLabel>
+        <translation>New Brunswick</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Hampshire</masterLabel>
+        <translation>New Hampshire</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Jersey</masterLabel>
+        <translation>New Jersey</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Mexico</masterLabel>
+        <translation>New Mexico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New York</masterLabel>
+        <translation>New York</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Newfoundland and Labrador</masterLabel>
+        <translation>Newfoundland og Labrador</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Carolina</masterLabel>
+        <translation>North Carolina</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Dakota</masterLabel>
+        <translation>North Dakota</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Northwest Territories</masterLabel>
+        <translation>Northwest Territories</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nova Scotia</masterLabel>
+        <translation>Nova Scotia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nunavut</masterLabel>
+        <translation>Nunavut</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ohio</masterLabel>
+        <translation>Ohio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oklahoma</masterLabel>
+        <translation>Oklahoma</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ontario</masterLabel>
+        <translation>Ontario</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oregon</masterLabel>
+        <translation>Oregon</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pennsylvania</masterLabel>
+        <translation>Pennsylvania</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prince Edward Island</masterLabel>
+        <translation>Prince Edward Island</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Quebec</masterLabel>
+        <translation>Quebec</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rhode Island</masterLabel>
+        <translation>Rhode Island</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Saskatchewan</masterLabel>
+        <translation>Saskatchewan</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Carolina</masterLabel>
+        <translation>South Carolina</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Dakota</masterLabel>
+        <translation>South Dakota</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tennessee</masterLabel>
+        <translation>Tennessee</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Texas</masterLabel>
+        <translation>Texas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Utah</masterLabel>
+        <translation>Utah</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vermont</masterLabel>
+        <translation>Vermont</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Virginia</masterLabel>
+        <translation>Virginia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Washington</masterLabel>
+        <translation>Washington</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>West Virginia</masterLabel>
+        <translation>West Virginia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wisconsin</masterLabel>
+        <translation>Wisconsin</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wyoming</masterLabel>
+        <translation>Wyoming</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Yukon Territories</masterLabel>
+        <translation>Yukon Territories</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

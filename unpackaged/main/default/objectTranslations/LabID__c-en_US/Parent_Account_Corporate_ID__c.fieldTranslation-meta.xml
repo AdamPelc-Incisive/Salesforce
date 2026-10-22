@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Corporate ID from parent account --></help>
+        <label><!-- Parent Account Corporate ID --></label>
+        <name>Parent_Account_Corporate_ID__c</name>
+    </CustomFieldTranslation>

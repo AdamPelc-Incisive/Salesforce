@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Contact_Email_or_Phone</fullName>
+    <active>true</active>
+    <description>OPS-247. Every contact needs at least one way to reach them: Email or Phone. MobilePhone is deliberately not included - the two Contact-creating flows were changed to write Phone instead, so Phone is the field that gets populated going forward.</description>
+    <errorConditionFormula>AND(
+  ISBLANK(Email),
+  ISBLANK(Phone)
+)</errorConditionFormula>
+    <errorMessage>A contact needs at least one way to reach them. Add an Email or a Phone number.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,177 @@
+<apex:page id="ConfigureRecipients"
+        controller="pandadoc.ConfigureRecipientsCtrl"
+        sidebar="false"
+        title="Configuring recipients mapping">
+
+    <apex:stylesheet value="{!URLFOR($Resource.pandadoc__RecipientsPage, '/styles.css')}" />
+    <c:SObjectMapping />
+
+    <apex:form id="mappingForm">
+        <apex:actionFunction name="removeMapping" action="{!delItem}" reRender="mappingForm" onComplete="initFieldSelectors();">
+            <apex:param value="" name="selectedObjectToDelete" assignTo="{!selectedObjectToDelete}" />
+        </apex:actionFunction>
+
+        <apex:pageBlock title="Add recipient mapping">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Choose an object to set up recipient mapping for"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem >
+                    <span style="text-align: left">
+                        <select class="smart-objects" map-to="{!$Component.selectedObject}">
+                            <option value="">Select new object</option>
+                        </select>
+                    </span>
+                    <apex:commandButton action="{!addMapping}" value="Add" disabled="{!ObjectsList.size == 0}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:inputHidden value="{!selectedNewObject}" id="selectedObject"/>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" />
+                <apex:commandButton action="{!getBack}" rendered="{!retUrlExist}" value="Cancel" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Map Salesforce contact fields with PandaDoc recipients fields"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlock title="Recipient mappings">
+                <apex:pageMessages />
+
+                <div style="overflow-x: auto; width: 100%;">
+                    <apex:pageBlockTable value="{!recipients}" var="rec" styleClass="objectsTable">
+                        <apex:column headerValue="Object" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <span class="used-object" object-name="{!rec.objectType}">{!rec.objectLabel}</span>
+                        </apex:column>
+                        <apex:column headerValue="First name field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <apex:inputHidden value="{!rec.settings.firstNameField}" id="firstNameHidden"/>
+                            <apex:inputHidden value="{!rec.settings.lastNameField}" id="lastNameHidden"/>
+                            <apex:inputHidden value="{!rec.settings.emailField}" id="emailHidden"/>
+                            <apex:inputHidden value="{!rec.settings.companyField}" id="companyHidden" />
+                            <apex:inputHidden value="{!rec.settings.phoneField}" id="phoneHidden"/>
+                            <apex:inputHidden value="{!rec.settings.roleField}" id="roleHidden"/>
+                            <apex:inputHidden value="{!rec.settings.titleField}" id="titleHidden"/>
+                            <apex:inputHidden value="{!rec.settings.countryField}" id="countryHidden"/>
+                            <apex:inputHidden value="{!rec.settings.stateField}" id="stateHidden"/>
+                            <apex:inputHidden value="{!rec.settings.streetAddressField}" id="streetAddressHidden"/>
+                            <apex:inputHidden value="{!rec.settings.cityField}" id="cityHidden"/>
+                            <apex:inputHidden value="{!rec.settings.postalCodeField}" id="postalCodeHidden"/>
+
+                            <select class="smart" value="{!rec.settings.firstNameField}" objName="{!rec.objectType}" fieldType="text" map-to="{!$Component.firstnamehidden}">
+                                <option value="{!rec.settings.firstNameField}">{!rec.firstNameFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Last name field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.lastNameField}" objName="{!rec.objectType}" fieldType="text" map-to="{!$Component.lastNameHidden}">
+                                <option value="{!rec.settings.lastNameField}">{!rec.lastNameFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <apex:facet name="header">
+                                Email field<font color="ff0000">*</font>
+                            </apex:facet>
+                            <select class="smart" value="{!rec.settings.emailField}" objName="{!rec.objectType}"  fieldType="email" is-required="true" map-to="{!$Component.emailHidden}">
+                                <option value="{!rec.settings.emailField}">{!rec.emailFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Company field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.companyField}" objName="{!rec.objectType}" fieldType="text" map-to="{!$Component.companyHidden}">
+                                <option value="{!rec.settings.companyField}">{!rec.companyFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Phone field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.phoneField}" objName="{!rec.objectType}" fieldType="phone" map-to="{!$Component.phoneHidden}">
+                                <option value="{!rec.settings.phoneField}">{!rec.phoneFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Role field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.roleField}" objName="{!rec.objectType}" fieldType="role" map-to="{!$Component.roleHidden}">
+                                <option value="{!rec.settings.roleField}">{!rec.roleFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Title field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.titleField}" objName="{!rec.objectType}" fieldType="text" map-to="{!$Component.titleHidden}">
+                                <option value="{!rec.settings.titleField}">{!rec.titleFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Country field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.countryField}" objName="{!rec.objectType}" fieldType="role" map-to="{!$Component.countryHidden}">
+                                <option value="{!rec.settings.countryField}">{!rec.countryFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="State field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.stateField}" objName="{!rec.objectType}" fieldType="role" map-to="{!$Component.stateHidden}">
+                                <option value="{!rec.settings.stateField}">{!rec.stateFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Street address field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.streetAddressField}" objName="{!rec.objectType}" fieldType="longtext" map-to="{!$Component.streetAddressHidden}">
+                                <option value="{!rec.settings.streetAddressField}">{!rec.streetAddressFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="City field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.cityField}" objName="{!rec.objectType}" fieldType="role" map-to="{!$Component.cityHidden}">
+                                <option value="{!rec.settings.cityField}">{!rec.cityFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column headerValue="Postal code field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <select class="smart" value="{!rec.settings.postalCodeField}" objName="{!rec.objectType}" fieldType="text" map-to="{!$Component.postalCodeHidden}">
+                                <option value="{!rec.settings.postalCodeField}">{!rec.postalCodeFieldLabel}</option>
+                            </select>
+                        </apex:column>
+                        <apex:column styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                            <apex:commandButton disabled="{! !rec.removable}"
+                                    value="Remove"
+                                    action="{!null}"
+                                    onClick="removeMapping('{!rec.objectType}'); return false;" />
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </div>
+            </apex:pageBlock>
+
+            <apex:pageBlock title="Recipients Filtering" id="recipient-filter">
+                <apex:pageBlockSection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Filter recipients addition to PandaDoc document based on the True/False values of the following parameters."/>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem />
+                </apex:pageBlockSection>
+                <div style="height: 5px" />
+                <apex:inputCheckbox id="filtering-checkbox" value="{!isFilteringEnabled}" />
+                <apex:outputLabel for="filtering-checkbox" style="vertical-align: super;">
+                    <h3>Enable filtering</h3>
+                </apex:outputLabel>
+
+                <apex:pageBlockTable value="{!recipients}" var="rec" styleClass="objectsTable" id="filteringTable">
+                    <apex:column value="{!rec.objectLabel}" headerValue="Object" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}" />
+                    <apex:column headerValue="Filtering field" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                        <apex:inputHidden value="{!rec.settings.filteringField}" id="filteringHidden" />
+                        <apex:outputText rendered="{! !isFilteringEnabled}">
+                            <select class="smart" value="{!rec.settings.filteringField}" disabled="disabled" objName="{!rec.objectType}" fieldType="boolean" map-to="{!$Component.filteringHidden}" empty-label="Do not filter">
+                                <option value="{!rec.settings.filteringField}">{!IF(rec.settings.filteringField=='', 'Do not filter', rec.filteringFieldLabel)}</option>
+                            </select>
+                        </apex:outputText>
+                        <apex:outputText rendered="{! isFilteringEnabled}">
+                            <select class="smart" value="{!rec.settings.filteringField}" objName="{!rec.objectType}" fieldType="boolean" map-to="{!$Component.filteringHidden}" empty-label="Do not filter">
+                                <option value="{!rec.settings.filteringField}">{!IF(rec.settings.filteringField=='', 'Do not filter', rec.filteringFieldLabel)}</option>
+                            </select>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="" styleClass="{!IF(rec.addedFromUrl, 'selected-from-url', '')}">
+                        <apex:inputHidden value="{!rec.filterIfCheckedStr}" id="filteringCheckbox" />
+                        <apex:outputText rendered="{! isFilteringEnabled}">
+                            <select style="max-width: inherit;" class="filter-checkbox" map-to="{!$Component.filteringCheckbox}"/>
+                        </apex:outputText>
+                        <apex:outputText rendered="{! !isFilteringEnabled}">
+                            <select style="max-width: inherit;" class="filter-checkbox" map-to="{!$Component.filteringCheckbox}" disabled="disabled"/>
+                        </apex:outputText>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

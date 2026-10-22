@@ -1,0 +1,440 @@
+<apex:page controller="pandadoc.TriggerSettingController" tabStyle="PandaDoc_Setup__tab" title="PandaDoc Setup">
+    <apex:slds />
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/pandaDocSetup.js')}" />
+    <c:SObjectMapping />
+    <apex:form id="main">
+        <apex:actionFunction name="setEnabled" action="{!setEnabled}" status="status" rerender="main" onComplete="initFieldSelectors(); spinner.hide();">
+            <apex:param name="settingId" assignTo="{!settingId}" value="" />
+            <apex:param name="currentEnabled" assignTo="{!currentEnabled}" value="" />
+        </apex:actionFunction>
+
+        <apex:actionFunction name="removeJsonBuilder" action="{!removeJsonBuilder}" status="status" reRender="main" onComplete="initFieldSelectors(); spinner.hide();">
+            <apex:param name="JsonBuilderForRemove" assignTo="{!JsonBuilderForRemove}" value="" />
+        </apex:actionFunction>
+
+        <apex:actionFunction name="removeTriggerHandler" action="{!removeTriggerHandler}" status="status" reRender="main" onComplete="initFieldSelectors(); spinner.hide();">
+            <apex:param name="handlerForRemove" assignTo="{!handlerForRemove}" value="" />
+        </apex:actionFunction>
+
+        <apex:actionFunction name="saveDocumentField" action="{!saveDocumentField}" reRender="main" onComplete="initFieldSelectors(); spinner.hide();" />
+        <apex:stylesheet value="{!URLFOR($Resource.pandadoc__setupPageCss, 'styles/reset.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.pandadoc__setupPageCss, 'styles/pandadoc.css')}" />
+        <div class="pandaDocSetup slds-p-left_large slds-p-right_large">
+            <h1><apex:image value="{!URLFOR($Resource.pandadoc__setupPageCss, 'styles/pandadoc-logo.png')}" alt="" width="24" height="24" />PandaDoc Settings</h1>
+
+            <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+            <h2 class="slds-m-bottom_medium">Add PandaDoc to your Salesforce objects</h2>
+            <p class="slds-m-bottom_medium">
+                In order to create, view and track documents inside Salesforce objects, you will first
+                <span class="text-bold">need to add the PandaDoc module</span> to your object page view.
+            </p>
+            <p class="slds-m-bottom_medium">
+                The PandaDoc integration standard setup supports <span class="text-bold">Opportunities, Leads, Accounts and Contacts,</span>
+                but you can also configure custom objects with some additional setup.
+            </p>
+            <p class="text-bold">
+                Setup guides:
+            </p>
+            <p>
+                <!-- span with display block used because of VF bug -->
+                <span class="display-block">
+                    <a href="https://support.pandadoc.com/en/articles/9714855-salesforce-lightning-install-and-configure-pandadoc" target="_blank">
+                        Salesforce Lightning. Install and configure PandaDoc
+                    </a>
+                </span>
+                <span class="display-block">
+                    <a href="https://support.pandadoc.com/en/articles/9714860-salesforce-lightning-create-and-send-pandadoc-documents" target="_blank">
+                        Salesforce Lightning. Create and send PandaDoc documents
+                    </a>
+                </span>
+                <span class="display-block">
+                    <a href="https://support.pandadoc.com/en/articles/9714866-salesforce-classic" target="_blank">
+                        Salesforce Classic. Create and send PandaDoc documents
+                    </a>
+                </span>
+                <span class="display-block">
+                    <a href="https://support.pandadoc.com/en/articles/9714920-salesforce-classic-add-pandadoc-to-custom-objects" target="_blank">
+                        Salesforce Classic. Add PandaDoc to custom objects
+                    </a>
+                </span>
+            </p>
+
+            <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+            <h2 class="slds-m-bottom_medium">Salesforce to PandaDoc data flow <span class="text-muted text-normal">(optional)</span></h2>
+            <p class="slds-m-bottom_small">Choose what data you want to pass from Salesforce into PandaDoc:</p>
+            <ul class="list-disc-inside slds-m-bottom_medium">
+                <li>Salesforce Fields &lt;&gt; PandaDoc Tokens</li>
+                <li>Salesforce Contacts &lt;&gt; PandaDoc Recipients</li>
+                <li>Salesforce Products &lt;&gt; PandaDoc Pricing Table Items</li>
+            </ul>
+            <p class="slds-m-bottom_medium">
+                <a class="pd-btn slds-text-link_reset" href="{!urlToConfigureTokensPage}">
+                    Configure Tokens
+                </a>
+                <a class="pd-btn slds-text-link_reset" href="{!urlToConfigureRecipients}">
+                    Configure Recipients
+                </a>
+                <a class="pd-btn slds-text-link_reset" href="{!urlToConfigurePricingItems}">
+                    Configure Pricing Items
+                </a>
+            </p>
+            <p>
+                <a href="https://support.pandadoc.com/en/articles/9714860-salesforce-lightning-create-and-send-pandadoc-documents#3" target="_blank">
+                    More on passing data from Salesforce into PandaDoc
+                </a>
+            </p>
+
+            <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+            <h2 class="slds-m-bottom_medium">Document trigger settings</h2>
+            <p>
+                You can setup triggers to automatically update and/or perform actions within Salesforce when the document status changes. PandaDoc offers default triggers, like adding notes to the associated record when the document status changes. You can also create of custom triggers.
+            </p>
+            <p class="slds-m-bottom_medium">
+                <a href="https://support.pandadoc.com/en/articles/9714863-salesforce-2-way-sync" target="_blank">
+                    Learn more about using Salesforce 2-Way Sync
+                </a>
+            </p>
+            <div class="slds-m-bottom_large">
+                <table class="table-fixed">
+                    <col width="30%" />
+                    <col width="45%" />
+                    <col width="10%" />
+                    <col width="15%" />
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Name</th>
+                        <th>Enabled</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <apex:repeat value="{!triggerSettingsViewModel}" var="trigger">
+                        <tr>
+                            <td><apex:outputField value="{!trigger.triggerSetting.pandadoc__Title__c}"/></td>
+                            <td>
+                                <apex:outputField value="{!trigger.triggerSetting.Name}"/>
+                            </td>
+                            <td>
+                                <apex:inputField value="{!trigger.triggerSetting.pandadoc__Enabled__c}" onChange="
+                                    if ({!trigger.canBeEnabled}) {
+                                        spinner.show();
+                                        setEnabled('{!trigger.triggerSetting.Id}', {!NOT(trigger.triggerSetting.Enabled__c)});
+                                    } else {
+                                        showDialogWithMessage('trigger-error-dialog', 'Can not enable trigger', '{!trigger.enablingErrorMessage}');
+                                        this.checked = !this.checked;
+                                    }
+                                    ">
+                                </apex:inputField>
+                            </td>
+                            <td>
+                                <apex:outputLink value="javascript:void" rendered="{!!trigger.isStandardTrigger}"
+                                        onClick="spinner.show(); removeTriggerHandler('{!trigger.triggerSetting.Name}'); return false;"
+                                >Remove
+                                </apex:outputLink>
+                                &nbsp;
+                                <apex:outputLink value="{!trigger.setupPageUrl}"
+                                        rendered="{!AND(trigger.triggerSetting.pandadoc__Enabled__c, trigger.hasSettingPage)}"
+                                >Setup
+                                </apex:outputLink>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td colspan="4"><apex:commandButton rendered="{!showAddTriggerButton}" onclick="showDialog('add-custom-trigger'); return false;" value="+ Add new trigger" styleClass="btn btn-primary"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Object customization settings</h2>
+            <p class="slds-m-bottom_medium">
+                <span class="display-block">Add PandaDoc to objects other than Account, Contact, Opportunity and Lead.</span>
+                <span class="display-block">Do a quick setup or create your own JSON data builder (for advanced users).</span>
+            </p>
+            <div class="slds-m-bottom_large">
+                <table class="table-fixed">
+                    <colgroup>
+                        <col width="30%" />
+                        <col width="25%" />
+                        <col width="30%" />
+                        <col width="15%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Builder class</th>
+                            <th>Object name</th>
+                            <th>
+                                Document name
+                                <c:helpIcon width="300px"
+                                        text="The name for your document will come from the selected field. For example, you can use a formula field: Opportunity name + account name as the title of your document." />
+                            </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <apex:repeat value="{!jsonBuilderViewModels}" var="mapping">
+                        <tr>
+                            <td><apex:outputField value="{!mapping.buildersMapping.pandadoc__JsonBuilder_Class_Name__c}"/></td>
+                            <td><apex:outputField value="{!mapping.buildersMapping.Name}"/></td>
+                            <td>
+                                <apex:inputHidden value="{!mapping.buildersMapping.pandadoc__Document_Name__c}" id="documentNameHidden"/>
+                                <select onchange="spinner.show(); saveDocumentField();" class="smart" value="{!mapping.buildersMapping.pandadoc__Document_Name__c}" objName="{!mapping.buildersMapping.Name}" fieldType="text" map-to="{!$Component.documentNameHidden}">
+                                    <option value="{!mapping.buildersMapping.pandadoc__Document_Name__c}">{!mapping.documentFieldLabel}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <apex:commandLink action="{!null}" onClick="spinner.show(); removeJsonBuilder('{!mapping.buildersMapping.Name}'); return false;">Remove</apex:commandLink>
+                                &nbsp;
+                                <apex:outputLink rendered="{!mapping.IsSetupAvailable}" value="{!mapping.redirect.url}">Setup</apex:outputLink>                            &nbsp;
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td colspan="4">
+                            <div>
+                                <apex:commandButton onclick="showDialog('add-standard-json-builder'); return false;" value="PandaDoc Quick Setup" styleClass="pd-btn push-next"/>
+                                <apex:commandButton onclick="showDialog('add-custom-json-builder'); return false;" value="Add Custom JSON Builder" styleClass="btn-primary" style="vertical-align: bottom;"  />
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="slds-m-bottom_medium">
+                <h2 class="display-inline slds-m-right_none">Advanced Settings</h2>
+                <a href="javascript:void" id="show-advanced-settings" class="vertical-align-top" onclick="showAdvancedSettings();">
+                    show
+                </a>
+            </div>
+
+            <div id="advanced-settings" style="display: none;">
+                <h2>Cleanup PandaDoc history</h2>
+                <p class="slds-m-bottom_medium">
+                    PandaDoc stores document data with a JSON payload in the technical object <code>PandaDocDocument__c</code>.
+                    It also stores historical data in the related <code>DocStatus__c</code> object.
+                    Configure when historical statuses should be removed to clear Data &amp; File Storage space.
+                </p>
+                <p>
+                    <a class="pd-btn slds-text-title slds-text-link_reset" href="{!urlToCleanUpPage}">
+                        Configure cleanup
+                    </a>
+                </p>
+
+                <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+                <h2>Cleanup PandaDoc Document Duplicates</h2>
+                <p class="slds-m-bottom_x-small">
+                    PandaDoc stores document data as a JSON payload in the technical object <code>PandaDocDocument__c</code>.  
+                    Under high system load, when many documents are created and synced back to Salesforce, duplicate <code>PandaDocDocument__c</code> records may be generated.  
+                </p>
+                <p class="slds-m-bottom_medium">
+                    These duplicates do not affect document triggers but may impact your reports.  
+                    Configure when duplicate documents should be deleted. The first created document for each UUID will remain, while duplicates will be removed.
+                </p>
+                <p>
+                    <a class="pd-btn slds-text-title slds-text-link_reset" href="{!urlToDeduplicatePage}">
+                        Configure Deduplication
+                    </a>
+                </p>
+
+                <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+                <h2>Logging</h2>
+                <p class="slds-m-bottom_medium">
+                    Enable debug logging to identify and resolve issues with PandaDoc.
+                    Disabling logging will automatically clear all stored log records.
+                </p>
+                <p>
+                    <apex:outputPanel id="loggingPanel">
+                        <apex:commandButton action="{!debugSettingsWrapper.switchLogging}"
+                                            value="{!debugSettingsWrapper.switcherText}"
+                                            styleClass="pd-btn"
+                                            onClick="spinner.show();"
+                                            reRender="loggingPanel"
+                                            onComplete="spinner.hide();"/>
+                        <a class="pd-btn slds-text-title slds-text-link_reset"
+                           target="_blank"
+                           href="{!URLFOR($Action.PandaDocLog__c.List, $ObjectType.PandaDocLog__c)}"
+                           onclick="redirectToListView(event, '{!JSENCODE(pandaDocListId)}', 'PandaDoc Logs', 'pandadoc__PandaDocLog__c')">
+                                PandaDoc Logs tab
+                        </a>
+                        <apex:outputText rendered="{!debugSettingsWrapper.isLogsEnabled}">
+                            <a class="pd-btn slds-text-title slds-text-link_reset" target="_blank" href="{!$Page.LogsDownload}">
+                                Download Logs
+                            </a>
+                            <span>{!debugSettingsWrapper.logsCountText}</span>
+                        </apex:outputText>
+                    </apex:outputPanel>
+                </p>
+
+                <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+                <h2>Documents list</h2>
+                <p class="slds-m-bottom_medium">
+                    Review your PandaDoc documents’ JSON payload and their historical backups.
+                </p>
+                <p>
+                    <a class="pd-btn slds-text-title slds-text-link_reset"
+                       target="_blank"
+                       href="{!URLFOR($Action.PandaDocDocument__c.List, $ObjectType.PandaDocDocument__c)}"
+                       onclick="redirectToListView(event, '{!JSENCODE(documentsListId)}', 'PandaDoc Documents', 'pandadoc__PandaDocDocument__c')">
+                            PandaDoc documents
+                    </a>
+                </p>
+
+                <hr class="blocks-divider slds-m-bottom_medium slds-m-top--small" />
+
+                <h2>API Tokens</h2>
+                <p class="slds-m-bottom_x-small">
+                    The API Token is generated automatically once the integration is connected in the workspace, allowing PandaDoc to sync document data (such as Document Status) back to Salesforce.
+                </p>
+                <p class="slds-m-bottom_x-small">
+                    Now, you can connect multiple PandaDoc workspaces, and tokens from each of them will be stored. This enables the execution of two-way sync triggers on documents from different workspaces. To use two-way sync triggers with multiple workspaces, please reconnect your workspaces.
+                </p>
+                <p class="slds-m-bottom_medium">
+                    For any questions or concerns, please feel free to reach out to <a href="mailto:support@pandadoc.com">support@pandadoc.com</a>.
+                </p>
+                <table class="table-fixed" style="width: 50%;">
+                    <colgroup>
+                        <col width="50%" />
+                        <col width="50%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Workspace UUID</th>
+                            <th>API Token</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!workspaceAuthorizations}" var="auth">
+                            <tr>
+                                <td>
+                                    <apex:outputField value="{!auth.Name}" />
+                                </td>
+                                <td>
+                                    <apex:inputField style="width: 280px;" value="{!auth.pandadoc__Token__c}" styleClass="form-control" html-disabled="true" />
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slds-m-bottom--large"></div>
+        </div>
+
+        <div role="dialog" id="add-custom-trigger" class="slds-modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                        Add new trigger
+                    </h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Title:</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputText styleClass="slds-input" value="{!newTriggerTitle}" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Trigger Handler Name:</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputText styleClass="slds-input" value="{!newTriggerName}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick="hideDialogs(); return false;">Cancel</button>
+                    <apex:commandButton styleClass="slds-button slds-button_brand" action="{!addNewTrigger}" value="Add"/>
+                </div>
+            </div>
+        </div>
+
+        <div role="dialog" id="add-custom-json-builder" class="slds-modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                        Add custom JSON builder
+                    </h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <apex:inputHidden value="{!newJsonBuilderSObject}" id="customObjectName" />
+                            <label class="slds-form-element__label">Name:</label>
+                            <div class="slds-form-element__control">
+                                <select class="smart-objects" map-to="{!$Component.customObjectName}">
+                                    <option value="">Select new object</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">JSONBuilderClass:</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputText styleClass="slds-input" value="{!newJsonBuilderClassName}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick="hideDialogs(); return false;">Cancel</button>
+                    <apex:commandButton styleClass="slds-button slds-button_brand" action="{!addNewJsonBuilder}" value="Add"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div role="dialog" id="add-standard-json-builder" class="slds-modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                        Add standard JSON builder
+                    </h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <apex:inputHidden value="{!standardJSONBuilderObject}" id="stdObjectName" />
+                    <select class="smart-objects" map-to="{!$Component.stdObjectName}">
+                        <option value="">Select new object</option>
+                    </select>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick="hideDialogs(); return false;">Cancel</button>
+                    <apex:commandButton styleClass="slds-button slds-button_brand" action="{!addStandardJsonBuilder}" value="Add" />
+                </div>
+            </div>
+        </div>
+
+        <div role="dialog" id="trigger-error-dialog" class="slds-modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate dialog-header">
+
+                    </h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <span class="dialog-text"></span>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick="hideDialogs(); return false;">Ok</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop"></div>
+        <div id="slds-spinner" style="height: 6rem; display: none">
+            <div class="slds-spinner_container slds-is-fixed">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

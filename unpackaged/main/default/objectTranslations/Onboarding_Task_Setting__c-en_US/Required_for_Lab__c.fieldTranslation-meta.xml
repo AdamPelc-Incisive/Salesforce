@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Required for Lab --></label>
+        <name>Required_for_Lab__c</name>
+        <relationshipLabel><!-- Onboarding Task Settings --></relationshipLabel>
+    </CustomFieldTranslation>

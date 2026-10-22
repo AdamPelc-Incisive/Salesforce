@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Lookup_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ Practice_ID__c &gt; 0,
+ &quot;Practice • PID: &quot; &amp; TEXT(Practice_ID__c) &amp;
+ IF(ISBLANK(TEXT(Type)), &quot;&quot;, &quot; • &quot; &amp; TEXT(Type)),
+ IF(
+  Corporate_ID__c &gt; 0,
+  &quot;Corporate • CID: &quot; &amp; TEXT(Corporate_ID__c) &amp;
+  IF(ISBLANK(TEXT(Type)), &quot;&quot;, &quot; • &quot; &amp; TEXT(Type)),
+  TEXT(Type)
+ )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Type Lookup Display</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

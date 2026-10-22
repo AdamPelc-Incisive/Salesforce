@@ -1,0 +1,22 @@
+.slds-listbox__option {
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.slds-listbox__option:hover,
+.slds-listbox__option:focus {
+    background-color: #f3f3f3;
+}
+
+.account-name {
+    color: #0176d3;
+    font-weight: 600;
+}
+
+.slds-listbox__option:hover .account-name {
+    text-decoration: underline;
+}
+
+.option-icon {
+    margin-right: 0.5rem;
+}

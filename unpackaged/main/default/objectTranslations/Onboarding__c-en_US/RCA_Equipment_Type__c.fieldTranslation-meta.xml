@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Scanner(s) in use at the practice. Prefilled from Account/Assets on RCA creation; CSM can override. --></help>
+        <label><!-- Scanner Type --></label>
+        <name>RCA_Equipment_Type__c</name>
+    </CustomFieldTranslation>

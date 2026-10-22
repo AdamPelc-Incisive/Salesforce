@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Remediation Completed Date - Date Risk Detected --></help>
+        <label><!-- Days from Risk to Remediation Complete --></label>
+        <name>Days_from_Risk_to_Remediation_Complete__c</name>
+    </CustomFieldTranslation>

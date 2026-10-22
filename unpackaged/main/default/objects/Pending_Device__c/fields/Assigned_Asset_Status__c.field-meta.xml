@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Asset_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Assigned_Asset__c),&quot;Pending Assignment&quot;,  TEXT(Assigned_Asset__r.Status) )</formula>
+    <inlineHelpText>If Asset is not assigned defaults to Pending Assignment; copies over from Asset&#39;s status once a device has been assigned</inlineHelpText>
+    <label>Assigned Asset Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

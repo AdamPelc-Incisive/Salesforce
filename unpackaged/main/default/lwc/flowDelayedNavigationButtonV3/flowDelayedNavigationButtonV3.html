@@ -1,0 +1,14 @@
+<template>
+    <div class={alignmentClass}>
+        <lightning-button
+            label={buttonLabel}
+            value={actionValue}
+            variant={variant}
+            icon-name={iconName}
+            icon-position={normalizedIconPosition}
+            disabled={_isNavigating}
+            onpointerdown={handlePointerDown}
+            onclick={handleClick}
+        ></lightning-button>
+    </div>
+</template>

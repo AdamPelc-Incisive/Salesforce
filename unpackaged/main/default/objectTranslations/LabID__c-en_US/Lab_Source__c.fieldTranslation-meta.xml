@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Lab Source --></label>
+        <lookupFilter>
+            <errorMessage><!-- This must be an account marked as a Lab --></errorMessage>
+            <informationalMessage><!-- This must be an account marked as a Lab --></informationalMessage>
+        </lookupFilter>
+        <name>Lab_Source__c</name>
+        <relationshipLabel><!-- This Lab&apos;s Practice IDs --></relationshipLabel>
+    </CustomFieldTranslation>

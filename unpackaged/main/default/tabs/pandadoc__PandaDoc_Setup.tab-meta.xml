@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>pandadoc__ConnectedApp_Resources/pandadoc__PandaDoc_Icon.png</icon>
+    <label>PandaDoc Setup</label>
+    <motif>Custom205: TV Widescreen</motif>
+    <page>pandadoc__PandaDocSetup</page>
+</CustomTab>

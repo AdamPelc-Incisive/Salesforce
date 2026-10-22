@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Leading_Spaces</fullName>
+    <active>true</active>
+    <description>Prevent people from entering ids with a leading space - it was mucking up sync to portal</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Lab_Practice_ID__c)),
+  LEFT(Lab_Practice_ID__c, 1) = &quot; &quot;
+)</errorConditionFormula>
+    <errorDisplayField>Lab_Practice_ID__c</errorDisplayField>
+    <errorMessage>Lab Practice ID cannot begin with a space. Please remove any leading spaces before saving.</errorMessage>
+</ValidationRule>

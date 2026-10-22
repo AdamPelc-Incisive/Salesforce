@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Secondary root-cause categories that contributed without being the primary cause. --></help>
+        <label><!-- Contributing Factors --></label>
+        <name>Contributing_Factors__c</name>
+        <picklistValues>
+            <masterLabel>Commercial / Pricing</masterLabel>
+            <translation><!-- Commercial / Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitive Displacement</masterLabel>
+            <translation><!-- Competitive Displacement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab Communication</masterLabel>
+            <translation><!-- Lab Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab Fit</masterLabel>
+            <translation><!-- Lab Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab Quality</masterLabel>
+            <translation><!-- Lab Quality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onboarding Gap</masterLabel>
+            <translation><!-- Onboarding Gap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice-Side Change</masterLabel>
+            <translation><!-- Practice-Side Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scanner Hardware</masterLabel>
+            <translation><!-- Scanner Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scanner Workflow</masterLabel>
+            <translation><!-- Scanner Workflow --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Usage Trend --></label>
+        <name>Usage_Trend__c</name>
+        <picklistValues>
+            <masterLabel>Declining</masterLabel>
+            <translation><!-- Declining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat</masterLabel>
+            <translation><!-- Flat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increasing</masterLabel>
+            <translation><!-- Increasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zero use</masterLabel>
+            <translation><!-- Zero use --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

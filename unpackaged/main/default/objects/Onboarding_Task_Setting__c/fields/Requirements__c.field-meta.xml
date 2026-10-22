@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirements__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(!ISBLANK(Required_for_Lab__c), !ISBLANK(Required_for_Scanner__c), TEXT(Required_for_Dental_Product__c) != &quot;&quot;), &quot;Lab and Device and Product&quot;,
+IF(AND(!ISBLANK(Required_for_Lab__c), TEXT(Required_for_Dental_Product__c) != &quot;&quot;), &quot;Lab and Product&quot;,
+IF(AND(!ISBLANK(Required_for_Lab__c), !ISBLANK(Required_for_Scanner__c)), &quot;Lab and Device&quot;,
+IF(AND(!ISBLANK(Required_for_Scanner__c), TEXT(Required_for_Dental_Product__c) != &quot;&quot;), &quot;Device and Product&quot;,
+IF(!ISBLANK(Required_for_Lab__c), &quot;Lab&quot;,
+IF(!ISBLANK(Required_for_Scanner__c), &quot;Device&quot;,
+IF(TEXT(Required_for_Dental_Product__c) != &quot;&quot;, &quot;Product&quot;,
+IF(Required_for_Downgraded_Device__c, &quot;Downgraded Device&quot;,
+IF(Required_for_Lab_Only__c, &quot;Lab Only&quot;,
+&quot;None&quot;)))))))))</formula>
+    <inlineHelpText>Determine which requirements are populated; used for automating</inlineHelpText>
+    <label>Requirements</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

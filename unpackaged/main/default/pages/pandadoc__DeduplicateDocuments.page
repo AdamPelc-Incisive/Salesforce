@@ -1,0 +1,37 @@
+<apex:page id="DeduplicateDocuments" controller="pandadoc.DeduplicateDocumentsController" title="PandaDoc Documents Deduplication">
+    <apex:form >
+    <apex:pageBlock title="Deduplication settings">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!scheduleDaily}" value="Schedule Daily Deduplication" />
+            <apex:commandButton action="{!executeDaily}" value="Run Daily Deduplication" /> 
+            <apex:commandButton action="{!executeFull}" value="Run Full Deduplication" />
+            <apex:commandButton value="Back" action="{!getBack}" />
+        </apex:pageBlockButtons>
+        <apex:pageMessages />
+        <apex:pageMessage summary="{!summary}" severity="info" strength="2" />
+    </apex:pageBlock>
+    <apex:pageBlock title="Deduplication status" id="deduplicationStatus">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!refreshStatus}" value="Refresh" reRender="deduplicationStatus"/>
+            <apex:commandButton action="{!stopScheduling}" value="Stop scheduling" disabled="{!scheduleJobDetail == null}" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection rendered="{!scheduleJobDetail != null}" title="Scheduler status">
+            <apex:outputField value="{!scheduleJobDetail.PreviousFireTime}" />
+            <apex:outputField value="{!scheduleJobDetail.NextFireTime}" />
+            <apex:outputField value="{!scheduleJobDetail.State}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!scheduleJobDetail == null}" title="Scheduler status">
+            <apex:outputText value="Deduplication not scheduled" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!batchJobDetail != null}" title="Batch status">
+            <apex:outputField value="{!batchJobDetail.Status}" />
+            <apex:outputField value="{!batchJobDetail.CompletedDate}" />
+            <apex:outputField value="{!batchJobDetail.TotalJobItems}" />
+            <apex:outputField value="{!batchJobDetail.JobItemsProcessed}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!batchJobDetail == null}" title="Batch status">
+            <apex:outputText value="Deduplication not executed" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

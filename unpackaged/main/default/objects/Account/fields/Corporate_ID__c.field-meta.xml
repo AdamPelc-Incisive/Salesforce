@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_ID__c</fullName>
+    <description>[PORTAL] Identifies Dental Group accounts (this field != null) and, via Parent, identifies Dental Practice accounts. Not itself synced to Portal. Confirm with RevOps before changing.</description>
+    <externalId>true</externalId>
+    <label>Corporate ID</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>true</unique>
+</CustomField>

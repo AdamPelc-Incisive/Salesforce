@@ -1,0 +1,7 @@
+<design:component label="L8 - Top 60/40, Bottom Full">
+    <flexipage:template >
+        <flexipage:region name="topLeft" defaultWidth="LARGE" />
+        <flexipage:region name="topRight" defaultWidth="SMALL" />
+        <flexipage:region name="bottom" defaultWidth="XLARGE" />
+    </flexipage:template>
+</design:component>

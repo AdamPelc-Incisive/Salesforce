@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCA_Primary_Lab__c</fullName>
+    <inlineHelpText>Lab(s) this practice works with. Prefilled from the Account&#39;s Works with Labs on RCA creation; CSM can override.</inlineHelpText>
+    <label>Primary Lab</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Labs</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

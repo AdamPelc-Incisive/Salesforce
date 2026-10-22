@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>1 Investigation</masterLabel>
+            <translation><!-- 1 Investigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Pre-Training</masterLabel>
+            <translation><!-- 1 Pre-Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Hardware Training</masterLabel>
+            <translation><!-- 2 Hardware Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Remediation</masterLabel>
+            <translation><!-- 2 Remediation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Verification</masterLabel>
+            <translation><!-- 3 Verification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Workflow Training</masterLabel>
+            <translation><!-- 3 Workflow Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Closed</masterLabel>
+            <translation><!-- 4 Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Post-Training</masterLabel>
+            <translation><!-- 4 Post-Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Onboarded</masterLabel>
+            <translation><!-- 5 Onboarded --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

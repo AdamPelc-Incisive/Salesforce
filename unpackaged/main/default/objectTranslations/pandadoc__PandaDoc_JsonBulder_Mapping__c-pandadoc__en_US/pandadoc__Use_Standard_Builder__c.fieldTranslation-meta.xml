@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If checked then Standard JSON Builder used --></help>
+        <label><!-- Use Standard Builder --></label>
+        <name>pandadoc__Use_Standard_Builder__c</name>
+    </CustomFieldTranslation>

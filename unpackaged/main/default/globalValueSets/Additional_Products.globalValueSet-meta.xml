@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Laptop</fullName>
+        <default>true</default>
+        <label>Laptop</label>
+    </customValue>
+    <customValue>
+        <fullName>Tablet</fullName>
+        <default>false</default>
+        <label>Tablet</label>
+    </customValue>
+    <masterLabel>XAdditional Products</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard</fullName>
+    <active>true</active>
+    <label>Standard</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Do</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Task__c</picklist>
+        <values>
+            <fullName>Check In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collect First Case Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collect Replacement Scanner Serial Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete ICAM Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete ICAM Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Incisive Overview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Trios Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Trios Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete X3 Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete X3 Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convert Subscription ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create BioTec Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create CCDL Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Orthobrain Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Power Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Return Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create SKDLA Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create TDL Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Universal Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create%2FMerge 3Shape Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deliver RCA to Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Case Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incisive Onboarding Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incisive Onboarding Call %28Lab Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue Final Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retire Old Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return Scanner to Inventory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Align Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule ICAM Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule ICAM Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Incisive Overview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Trios Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Trios Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule X3 Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule X3 Unboxing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Downgrade Docusign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Equipment Shipped Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Return Instructions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Welcome Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship ICAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Trios 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Trios 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Trios 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Trios Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship X3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage ICAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage Trios 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage Trios 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage Trios 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage Trios Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage X3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submit Order Email to iTero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Preferences Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Health Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Training %E2%80%93 Aligners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Training %E2%80%93 DV High Esthetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Training %E2%80%93 Power AOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Training %E2%80%93 SKDLA AOX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

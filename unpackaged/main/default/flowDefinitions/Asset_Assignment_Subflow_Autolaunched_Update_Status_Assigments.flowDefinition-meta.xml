@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Input a status, an asset (and/or collection) as well as initial Asset Assignment values.  This will create assignment records for serialized assets, and update the status of all assets.
+
+8-10-26: Deactivated (INC3-95)</description>
+    <masterLabel>Asset Assignment Subflow - Autolaunched - Update Status &amp; Assigments</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Standard C&amp;B</fullName>
+        <default>false</default>
+        <label>Standard C&amp;B</label>
+    </customValue>
+    <customValue>
+        <fullName>High Esthetics</fullName>
+        <default>false</default>
+        <label>High Esthetics</label>
+    </customValue>
+    <customValue>
+        <fullName>AOX</fullName>
+        <default>false</default>
+        <label>AOX</label>
+    </customValue>
+    <customValue>
+        <fullName>Removables</fullName>
+        <default>false</default>
+        <label>Removables</label>
+    </customValue>
+    <customValue>
+        <fullName>Aligners</fullName>
+        <default>false</default>
+        <label>Aligners</label>
+    </customValue>
+    <customValue>
+        <fullName>Ortho</fullName>
+        <default>false</default>
+        <label>Ortho</label>
+    </customValue>
+    <customValue>
+        <fullName>Appliances</fullName>
+        <default>false</default>
+        <label>Appliances</label>
+    </customValue>
+    <masterLabel>Dental Products</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

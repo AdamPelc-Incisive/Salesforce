@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mature_Date__c</fullName>
+    <formula>IF(
+  OR(
+    ISBLANK(Product2Id),
+    TEXT(Product2.Family) &lt;&gt; &quot;Scanner&quot;
+  ),
+  NULL,
+  Deployment_Date__c + 84
+)</formula>
+    <inlineHelpText>Date this scanner hit 12 weeks deployed</inlineHelpText>
+    <label>Mature Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

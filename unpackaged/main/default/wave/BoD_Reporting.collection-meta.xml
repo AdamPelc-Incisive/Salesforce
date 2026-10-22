@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveAnalyticAssetCollection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <collectionType>static</collectionType>
+    <color>#1b96ff</color>
+    <folder>BoD_Reporting</folder>
+    <items>
+        <asset>Scanners_Sold_by_Month_VCm</asset>
+        <assetType>Report</assetType>
+        <sortOrder>499</sortOrder>
+    </items>
+    <label>BoD Reporting</label>
+    <masterLabel>BoD Reporting</masterLabel>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>michael@joinincisive.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+</WaveAnalyticAssetCollection>

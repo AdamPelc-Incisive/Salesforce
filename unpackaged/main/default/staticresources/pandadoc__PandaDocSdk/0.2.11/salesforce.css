@@ -1,0 +1,26 @@
+.sdk-extension__empty-list__new-doc-btn {
+  display: none;
+}
+.sdk-extension__empty-list__message {
+  display: none;
+}
+
+.sdk-extension__doclist-panel {}
+.sdk-extension__doclist-pane__new-doc-btn {
+  display: none;
+}
+.sdk-extension__doclist-pane__table-title {}
+.sdk-extension__doclist-pane__table-content {}
+
+.sdk-extension__doclist-pane__table-content a.stretcher {
+  overflow: hidden;
+}
+.sdk-extension__doclist-pane__table-content .table-data__title {
+  float:left;
+  padding-right: 15px;
+  margin-bottom: 0 !important;
+}
+.sdk-extension__doclist-pane__table-content .doc-status {
+  padding-top:1px;
+}
+.sdk-extension__doclist-pane__table-content .table-data__date {}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The remediation action committed to for this account. --></help>
+        <label><!-- Remediation Action --></label>
+        <name>Remediation_Action__c</name>
+        <picklistValues>
+            <masterLabel>Account plan reset</masterLabel>
+            <translation><!-- Account plan reset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit / billing adjustment</masterLabel>
+            <translation><!-- Credit / billing adjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom pricing adjustment</masterLabel>
+            <translation><!-- Custom pricing adjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware swap or repair</masterLabel>
+            <translation><!-- Hardware swap or repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab network change</masterLabel>
+            <translation><!-- Lab network change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimum waiver (1 quarter)</masterLabel>
+            <translation><!-- Minimum waiver (1 quarter) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No remediation - escalate to Cancel</masterLabel>
+            <translation><!-- No remediation - escalate to Cancel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onboarding redo</masterLabel>
+            <translation><!-- Onboarding redo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationship escalation</masterLabel>
+            <translation><!-- Relationship escalation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow intervention / re-training</masterLabel>
+            <translation><!-- Workflow intervention / re-training --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Point_of_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>OPS-56/OPS-187. The practice-side contact who owns and coordinates implementation, captured on the CS Handover screen at Closed Won. Scoped to New Sales, the same way Welcome_Email__c (which this supersedes going forward) is. Not Primary_Contact__c - that field is scoped to the RCA record type and unrelated to this process.</description>
+    <inlineHelpText>Who runs onboarding at the practice. Not the contract signer or a generic inbox unless they&#39;re actually the one doing implementation.</inlineHelpText>
+    <label>Onboarding Point of Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Onboardings (Point of Contact)</relationshipLabel>
+    <relationshipName>Onboarding_Points_of_Contact</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

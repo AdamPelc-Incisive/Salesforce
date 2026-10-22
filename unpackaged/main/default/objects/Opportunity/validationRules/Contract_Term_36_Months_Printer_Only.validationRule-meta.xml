@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Term_36_Months_Printer_Only</fullName>
+    <active>true</active>
+    <description>OPS-366: a 36 Months Contract Term is only allowed when Plan Type is Printer.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Contract_Term__c, &quot;36 Months&quot;),
+NOT(ISPICKVAL(Plan_Type__c, &quot;Printer&quot;))
+)</errorConditionFormula>
+    <errorMessage>A 36 Months Contract Term is only available when Plan Type is Printer.</errorMessage>
+</ValidationRule>

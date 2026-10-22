@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>No Budget</fullName>
+        <default>false</default>
+        <label>No Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>No longer needed</fullName>
+        <default>false</default>
+        <label>No longer needed</label>
+    </customValue>
+    <customValue>
+        <fullName>Purchased different product</fullName>
+        <default>false</default>
+        <label>Purchased different product</label>
+    </customValue>
+    <customValue>
+        <fullName>Wanted Free</fullName>
+        <default>false</default>
+        <label>Wanted Free</label>
+    </customValue>
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Price</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Needs</fullName>
+        <default>false</default>
+        <label>Product Needs</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Delayed</fullName>
+        <default>false</default>
+        <label>Project Delayed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unresponsive</fullName>
+        <default>false</default>
+        <label>Unresponsive</label>
+    </customValue>
+    <customValue>
+        <fullName>Unqualified</fullName>
+        <default>false</default>
+        <label>Unqualified</label>
+    </customValue>
+    <description>nurture lifecycle subtypes to further categorize</description>
+    <masterLabel>Nurture Subtype</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

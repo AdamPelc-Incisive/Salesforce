@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Who runs onboarding at the practice. Not the contract signer or a generic inbox unless they&apos;re actually the one doing implementation. --></help>
+        <label><!-- Onboarding Point of Contact --></label>
+        <name>Onboarding_Point_of_Contact__c</name>
+        <relationshipLabel><!-- Onboardings (Point of Contact) --></relationshipLabel>
+    </CustomFieldTranslation>

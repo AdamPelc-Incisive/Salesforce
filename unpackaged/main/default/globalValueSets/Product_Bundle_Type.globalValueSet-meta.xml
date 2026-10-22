@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Received</fullName>
+        <default>false</default>
+        <label>Received</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipped</fullName>
+        <default>false</default>
+        <label>Shipped</label>
+    </customValue>
+    <masterLabel>Product Bundle Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

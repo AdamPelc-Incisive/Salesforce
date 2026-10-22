@@ -1,0 +1,29 @@
+<apex:page id="StandardJsonBuilder"
+        controller="pandadoc.StandardJsonBuilderController"
+        title="Configure {!objectLabel} related objects">
+
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/configureRelatedObjects.js')}" />
+    <apex:slds />
+    <apex:form >
+        <apex:actionFunction name="getBack" action="{!getBack}" />
+    </apex:form>
+
+    <div id="approot" class="slds-scope slds-m-around_x-small"></div>
+
+    <script>
+        window.__initial_state__ = JSON.parse('{!JSENCODE(initialState)}');
+
+        window.__remote_actions__ = {
+            'saveRelations': '{!$RemoteAction.StandardJsonBuilderController.saveRelations}'
+        };
+
+        window.__global_config__ = {
+            selected_object_label: '{!JSENCODE(objectLabel)}',
+            selected_object: '{!JSENCODE(SObjectName)}',
+            slds_assets: '{!JSENCODE(URLFOR($Asset.SLDS))}',
+            cancel_method: getBack,
+            url_to_recipients_config: '{!JSENCODE(urlToConfigureRecipients)}',
+            url_to_pricing_items_config: '{!JSENCODE(urlToConfigureItems)}'
+        };
+    </script>
+</apex:page>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SKDLA</fullName>
+        <default>false</default>
+        <label>SKDLA</label>
+    </customValue>
+    <customValue>
+        <fullName>Biotec</fullName>
+        <default>false</default>
+        <label>Biotec</label>
+    </customValue>
+    <customValue>
+        <fullName>DaVinci</fullName>
+        <default>false</default>
+        <label>DaVinci</label>
+    </customValue>
+    <customValue>
+        <fullName>Power</fullName>
+        <default>false</default>
+        <label>Power</label>
+    </customValue>
+    <customValue>
+        <fullName>ClearCorrect</fullName>
+        <default>false</default>
+        <label>ClearCorrect</label>
+    </customValue>
+    <customValue>
+        <fullName>Orthobrain</fullName>
+        <default>false</default>
+        <label>Orthobrain</label>
+    </customValue>
+    <customValue>
+        <fullName>Universal</fullName>
+        <default>false</default>
+        <label>Universal</label>
+    </customValue>
+    <description>Incisive Partner Labs</description>
+    <masterLabel>Labs</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

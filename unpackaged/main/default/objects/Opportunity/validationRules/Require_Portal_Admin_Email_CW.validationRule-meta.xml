@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Portal_Admin_Email_CW</fullName>
+    <active>true</active>
+    <description>OPS-242. Blocks Closed Won when a practice-level Account has no Clinical Email (the Portal Admin email). Scoped to Practice: it is populated on only 1 of 384 corps in prod. Inert while the field is blank.</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(StageName, &quot;Closed Won&quot;),
+  TEXT(Account.Account_Level__c) = &quot;Practice&quot;,
+  ISBLANK(Account.Clinical_Email__c)
+)</errorConditionFormula>
+    <errorMessage>Cannot mark Closed Won: the Account is missing a Portal Admin Email (Clinical Email). Add it on the Close screen, or update the Account directly.</errorMessage>
+</ValidationRule>

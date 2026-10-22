@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  TEXT(Status) = &quot;Deployed&quot;,
+  IMAGE(
+    &quot;/img/samples/color_green.gif&quot;,
+    &quot;Deployed&quot;,
+    16,
+    16
+  ),
+  IMAGE(
+    &quot;/img/samples/color_red.gif&quot;,
+    &quot;Not Deployed&quot;,
+    16,
+    16
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Deployed?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Ordered</fullName>
+        <default>true</default>
+        <label>Ordered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inventory</fullName>
+        <default>false</default>
+        <label>Inventory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shipped</fullName>
+        <default>false</default>
+        <label>Shipped</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deployed</fullName>
+        <default>false</default>
+        <label>Deployed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Return</fullName>
+        <default>false</default>
+        <label>Pending Return</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retired</fullName>
+        <default>false</default>
+        <label>Retired</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Upsell</fullName>
+        <default>false</default>
+        <label>Pending Upsell</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Downsell</fullName>
+        <default>false</default>
+        <label>Pending Downsell</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Returned</fullName>
+        <default>false</default>
+        <label>Returned</label>
+    </standardValue>
+</StandardValueSet>

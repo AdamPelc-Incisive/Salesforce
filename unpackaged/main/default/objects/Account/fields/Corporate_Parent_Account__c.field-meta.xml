@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Parent_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Set automatically - used for listing practices below corporate accounts</inlineHelpText>
+    <label>Corporate Parent Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.ParentId</field>
+            <operation>equals</operation>
+            <value />
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Practice Accounts</relationshipLabel>
+    <relationshipName>Practice_Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

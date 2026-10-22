@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a new Part Request for this account and submit for approval</description>
+    <flowDefinition>Part_Request_Screenflow_New_Request</flowDefinition>
+    <label>Part Request</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Rep_Org__c</fullName>
+    <description>Which partner organization&#39;s rep was involved in this opportunity, if any. &quot;None&quot; means no partner rep was involved. Intentionally name-agnostic (not Straumann-specific) so any current or future partnership can be tracked - see OPS-286. Defaults to &quot;None&quot; rather than true blank because Dynamic Forms visibility rules on a Picklist field require an explicit comparison value - the NE-with-no-rightValue &quot;is not blank&quot; trick used elsewhere on this page (e.g. Eligible_Labs__c) only works for text/lookup/multiselect fields, not single-select Picklist.</description>
+    <inlineHelpText>Leave as None if no partner rep was involved.</inlineHelpText>
+    <label>Partner Rep Org</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Straumann Group</fullName>
+                <default>false</default>
+                <label>Straumann Group</label>
+            </value>
+            <value>
+                <fullName>Align</fullName>
+                <default>false</default>
+                <label>Align</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Neodent</fullName>
+                <default>false</default>
+                <label>Neodent</label>
+            </value>
+            <value>
+                <fullName>ClearCorrect</fullName>
+                <default>false</default>
+                <label>ClearCorrect</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

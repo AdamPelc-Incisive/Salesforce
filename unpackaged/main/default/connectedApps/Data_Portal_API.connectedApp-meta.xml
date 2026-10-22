@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>santhoshs@p-signal.com</contactEmail>
+    <label>Data Portal API</label>
+    <oauthConfig>
+        <callbackUrl>https://example.com/oauth/callback</callbackUrl>
+        <certificate>MIID2zCCAsOgAwIBAgIUbpsiL8+O6tbOv+UHvk29x8zx3L4wDQYJKoZIhvcNAQELBQAwfTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ0wCwYDVQQHDARDb2JiMREwDwYDVQQKDAhJbmNpc2l2ZTELMAkGA1UECwwCSUMxCzAJBgNVBAMMAklOMSUwIwYJKoZIhvcNAQkBFhZzYW50aG9zaHNAcC1zaWduYWwuY29tMB4XDTI2MDEyNTAxMTAyOVoXDTI3MDEyNTAxMTAyOVowfTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ0wCwYDVQQHDARDb2JiMREwDwYDVQQKDAhJbmNpc2l2ZTELMAkGA1UECwwCSUMxCzAJBgNVBAMMAklOMSUwIwYJKoZIhvcNAQkBFhZzYW50aG9zaHNAcC1zaWduYWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1ciD5yXp3clxDw05S1rN7ZoGl8J0FGh7h17HNH56whmV8hMUfqxjxfaQk1MnKORMuN/zvwtudV7I57etAbV3jU1Zqcde7cNCohorKlraw7cws41v7HdqpEE/FVX3YOHcm7loNUd8HNNX9H9VhSojdetFXhxzJJDxC4m0sLgD0dXg6La9YhJoUyZIZHrOk3clk5h5NGUaAE0qjZzF+pFVOFzQdFm/KNsBbSuH03DIZP7+FNvcuVyF2vuK/59C+PmXE7BGpcLa2WnreaE6Lw2RS847avdUcA47HY4ileOp+hKWIy1pJPPSREagglXGD3vy1knmKm8Q/8KXhGFQ+rO14QIDAQABo1MwUTAdBgNVHQ4EFgQUExkhw/7ooKxh+MypVoOlf/w62XEwHwYDVR0jBBgwFoAUExkhw/7ooKxh+MypVoOlf/w62XEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAnXldfUSMzRHfFo3NctlCfLOux8sY5o18mO68ujwgUxhNd8grnRgSdIiWpvX+SPiz+nD1/xsu9QaAGxYKUwVoicarjzAA1/5RwthrBptIj7NR4leTSD9Y/u2WGGJFLCMBlfcsj1GKwwStYGtnTiS2Bzb1s5Fe6Lry5YhQSMtUfHsvJAXuIrICtD4hEPlIAWVriJIOgtxOZPKpljLERBOoxiaKS7oBTlbkeKj2QByKEQUSb8hCclXi/sn7kPGB79170DMm7tv+7F3eQxp0Eadh/RKHQB+gchrQ1dTj9Ge6WYr8eXqF15nTJPRe9kXAhe9TExeCFQd8oCYJ9LVJIsIJbw==</certificate>
+        <consumerKey>3MVG9jSKmPAPVo2Kr0Rg2ujvkg5MD5EvJ7uiEhJ_PHB7BXe9fn0TBJSu3ZxBzvzw37mWY2TMJnBBVwx8cMHoq</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>true</isConsumerSecretOptional>
+        <isDPopEnabled>false</isDPopEnabled>
+        <isDeviceFlowEnabled>false</isDeviceFlowEnabled>
+        <isEnforceRefreshTokenTTL>false</isEnforceRefreshTokenTTL>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isIpBindingEnabled>false</isIpBindingEnabled>
+        <isNamedUserJwtEnabled>true</isNamedUserJwtEnabled>
+        <isPKImTLSEnabled>false</isPKImTLSEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>true</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <oauthClientCredentialUser>systemintegrations+incisive.dataapi@lock8partners.com</oauthClientCredentialUser>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>Data Portal Access</permissionSetName>
+</ConnectedApp>

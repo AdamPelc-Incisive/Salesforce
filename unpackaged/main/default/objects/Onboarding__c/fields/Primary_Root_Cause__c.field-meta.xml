@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Root_Cause__c</fullName>
+    <inlineHelpText>The single primary root cause for the at-risk situation. Controls the available Specific Reason Codes.</inlineHelpText>
+    <label>Primary Root Cause</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scanner Hardware</fullName>
+                <default>false</default>
+                <label>Scanner Hardware</label>
+            </value>
+            <value>
+                <fullName>Scanner Workflow</fullName>
+                <default>false</default>
+                <label>Scanner Workflow</label>
+            </value>
+            <value>
+                <fullName>Lab Quality</fullName>
+                <default>false</default>
+                <label>Lab Quality</label>
+            </value>
+            <value>
+                <fullName>Lab Communication</fullName>
+                <default>false</default>
+                <label>Lab Communication</label>
+            </value>
+            <value>
+                <fullName>Lab Fit</fullName>
+                <default>false</default>
+                <label>Lab Fit</label>
+            </value>
+            <value>
+                <fullName>Onboarding Gap</fullName>
+                <default>false</default>
+                <label>Onboarding Gap</label>
+            </value>
+            <value>
+                <fullName>Commercial / Pricing</fullName>
+                <default>false</default>
+                <label>Commercial / Pricing</label>
+            </value>
+            <value>
+                <fullName>Practice-Side Change</fullName>
+                <default>false</default>
+                <label>Practice-Side Change</label>
+            </value>
+            <value>
+                <fullName>Competitive Displacement</fullName>
+                <default>false</default>
+                <label>Competitive Displacement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

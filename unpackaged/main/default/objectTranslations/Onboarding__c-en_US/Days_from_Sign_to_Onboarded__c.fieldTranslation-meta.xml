@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Onboarding Complete Date - Sign Date --></help>
+        <label><!-- Days from Sign to Onboarded --></label>
+        <name>Days_from_Sign_to_Onboarded__c</name>
+    </CustomFieldTranslation>

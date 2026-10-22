@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Repeatable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If this task can happen more than once for the same onboarding (ie two tasks for two different scanners of the same type)</inlineHelpText>
+    <label>Is Repeatable</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

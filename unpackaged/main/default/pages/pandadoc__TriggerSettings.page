@@ -1,0 +1,119 @@
+<apex:page controller="pandadoc.TriggerSettingController" tabStyle="PandaDoc_Setup__tab">
+    <apex:form >
+        <apex:actionFunction name="setEnabled" action="{!setEnabled}" status="status" rerender="main">
+            <apex:param name="settingId" assignTo="{!settingId}" value=""></apex:param>
+            <apex:param name="currentEnabled" assignTo="{!currentEnabled}" value=""></apex:param>
+        </apex:actionFunction>
+        
+        <apex:actionFunction name="addNewTrigger" action="{!addNewTrigger}" status="status" rerender="main">
+            <apex:param name="newTriggerTitle" assignTo="{!newTriggerTitle}" value=""></apex:param>
+            <apex:param name="newTriggerName" assignTo="{!newTriggerName}" value=""></apex:param>
+        </apex:actionFunction>
+    
+        <apex:outputpanel >
+            <apex:actionstatus id="status">
+                <apex:facet name="start">
+                    <div class="waitingSearchDiv" style="background-color: #fbfbfb;
+                           height: 100%;opacity:0.65;width:100%;"> 
+                        <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+                            <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                            <span class="waitingDescription">Loading...</span>
+                        </div>
+                    </div>
+                </apex:facet>
+            </apex:actionstatus>
+        </apex:outputpanel>
+    
+        <apex:pageBlock title="Trigger Settings" id="main">
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton rendered="{!showAddTriggerButton}" onclick="return addNewTriggerHandler();" value="Add new trigger"></apex:commandButton>
+            </apex:pageBlockButtons>
+        
+            <apex:pageBlockTable value="{!triggerSettingsViewModel}" var="triggerSettingViewModel" id="settingsTable" columnsWidth="30%,30%,20%,20%">
+            
+                <apex:column >
+                    <apex:facet name="header">Title</apex:facet>
+                    <apex:outputField value="{!triggerSettingViewModel.triggerSetting.pandadoc__Title__c}"></apex:outputField>
+                </apex:column>
+            
+                <apex:column >
+                    <apex:facet name="header">Trigger Name</apex:facet>
+                    <apex:outputField value="{!triggerSettingViewModel.triggerSetting.Name}"></apex:outputField>
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">Enabled</apex:facet>
+                    <apex:inputField value="{!triggerSettingViewModel.triggerSetting.pandadoc__Enabled__c}" onChange="setEnabled('{!triggerSettingViewModel.triggerSetting.Id}', {!NOT(triggerSettingViewModel.triggerSetting.pandadoc__Enabled__c)})"></apex:inputField>
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">Custom Settings</apex:facet>
+                    <apex:outputPanel rendered="{!AND(triggerSettingViewModel.triggerSetting.pandadoc__Enabled__c, triggerSettingViewModel.hasSettingPage)}">
+                        <apex:outputLink value="{!URLFOR(triggerSettingViewModel.setupPageUrl)}">Setup</apex:outputLink>
+                    </apex:outputPanel>
+                </apex:column>
+             </apex:pageBlockTable>              
+        </apex:pageBlock>
+        
+        <apex:outputPanel layout="block" id="modal-content" style="display: none;"> 
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Title:" for="modal-trigger-title"/>
+                        <apex:inputText id="modal-trigger-title"></apex:inputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Name:" for="modal-trigger-name"/>
+                        <apex:inputText id="modal-trigger-name"></apex:inputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton id="modal-add-trigger" value="Add" onclick="return modalAddTriggerHandler();"></apex:commandButton>
+                    <apex:commandButton id="modal-cancel" value="Cancel" onclick="return modalCancelHandler();"></apex:commandButton>
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+    
+    <script>
+    
+        var modalDialog;
+    
+        function showSimpleDialog(title, htmlBody, isDraggable){    
+           var sd = new SimpleDialog("SD"+Dialogs.getNextId(), isDraggable);    
+           sd.setTitle(title);    
+           sd.createDialog();     
+           sd.setContentInnerHTML(htmlBody);    
+           sd.show();   
+           return sd;   
+        }
+        
+        function modalAddTriggerHandler(){
+            
+            var triggerTitle = document.querySelector("#modal input[id*='modal-trigger-title']").value;
+            var triggerName = document.querySelector("#modal input[id*='modal-trigger-name']").value;
+            
+            if(!triggerTitle || !triggerName){
+                modalDialog.hide();
+                return false;
+            }
+            
+            addNewTrigger(triggerTitle, triggerName);
+            
+            modalDialog.hide();
+            return false;
+        }
+        
+        function modalCancelHandler(){
+            modalDialog.hide();
+            return false;
+        }
+    
+        function addNewTriggerHandler(){
+            var content = '<div id="modal">' + document.querySelector("div[id*='modal-content']").innerHTML + '</div>'
+            modalDialog = showSimpleDialog('Add new trigger', content, false);
+            return false;
+        }
+    </script>
+</apex:page>

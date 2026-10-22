@@ -1,0 +1,6 @@
+<a href="{!ApprovalRequest.Internal_URL}">Review and Approve/Reject</a>
+<p>
+<strong>Submitted by:</strong> {!Part_Request__c.Submitted_By__c} 
+<br><strong>Practice:</strong> {!Part_Request__c.Practice_Account__c}
+<br><strong>Part:</strong> {!Part_Request__c.Requested_Part__c}
+<br><strong>Notes:</strong> {!Part_Request__c.Notes__c}

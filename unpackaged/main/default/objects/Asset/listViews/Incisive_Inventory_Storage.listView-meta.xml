@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incisive_Inventory_Storage</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ASSET.SERIAL_NUMBER</columns>
+    <columns>ASSET.INSTALL_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.NAME</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>ASSET.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>equals</operation>
+        <value>Incisive Inventory Storage</value>
+    </filters>
+    <label>Incisive Inventory Storage</label>
+</ListView>

@@ -1,0 +1,28 @@
+.THIS .l8-template {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.THIS .l8-top-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.THIS .l8-top-left {
+    flex: 0 0 60%;
+    width: 60%;
+    padding-right: 8px;
+}
+
+.THIS .l8-top-right {
+    flex: 0 0 40%;
+    width: 40%;
+}
+
+.THIS .l8-bottom-row {
+    width: 100%;
+    margin-top: 8px;
+}

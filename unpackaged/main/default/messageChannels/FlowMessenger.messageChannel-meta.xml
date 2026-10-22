@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Salesforce Record ID being acted upon</description>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>The action being signaled (e.g. selected, submitted, cancelled)</description>
+        <fieldName>action</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Optional session identifier to correlate messages across flows</description>
+        <fieldName>sessionId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Status value (e.g. success, error, pending)</description>
+        <fieldName>status</fieldName>
+    </lightningMessageFields>
+    <masterLabel>FlowMessenger</masterLabel>
+</LightningMessageChannel>

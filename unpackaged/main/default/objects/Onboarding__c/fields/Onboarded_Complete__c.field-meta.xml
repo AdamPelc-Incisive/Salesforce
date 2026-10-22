@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarded_Complete__c</fullName>
+    <formula>IF(
+AND(Total_Onboarded_Tasks__c&gt;0,
+Total_Onboarded_Tasks__c=Total_Onboarded_Tasks_Completed__c)
+,TRUE,FALSE)</formula>
+    <label>Onboarded Complete</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

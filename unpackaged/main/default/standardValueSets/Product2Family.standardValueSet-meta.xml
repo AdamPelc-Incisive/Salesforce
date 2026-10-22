@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scanner</fullName>
+        <default>false</default>
+        <label>Scanner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Laptop</fullName>
+        <default>false</default>
+        <label>Laptop</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consumable</fullName>
+        <default>false</default>
+        <label>Consumable</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accessory</fullName>
+        <default>false</default>
+        <label>Accessory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Printer</fullName>
+        <default>false</default>
+        <label>Printer</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iCam_Bundles</fullName>
+    <columns>NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Bundle_Type__c</columns>
+    <columns>Required_for_Product__c</columns>
+    <columns>Quantity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Required_for_Product__c</field>
+        <operation>equals</operation>
+        <value>ICAM</value>
+    </filters>
+    <label>iCam Bundles</label>
+</ListView>

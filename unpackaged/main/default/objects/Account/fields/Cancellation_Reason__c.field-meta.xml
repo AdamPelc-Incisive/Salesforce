@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reason__c</fullName>
+    <label>Cancellation Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lab Quality</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Lab Quality</label>
+            </value>
+            <value>
+                <fullName>Lab Communication</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Lab Communication</label>
+            </value>
+            <value>
+                <fullName>Scanner Issue</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Scanner Issue</label>
+            </value>
+            <value>
+                <fullName>Insufficient Volume</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Insufficient Volume</label>
+            </value>
+            <value>
+                <fullName>Bad Fit</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Bad Fit</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

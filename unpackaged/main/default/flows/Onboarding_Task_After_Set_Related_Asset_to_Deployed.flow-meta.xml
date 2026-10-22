@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Asset_Status</name>
+        <label>Update Asset Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Asset.Training_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Asset.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Deployed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Asset.Status_Change_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Deployed via Hardware Training completion</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Child_Assets</targetReference>
+        </connector>
+    </assignments>
+    <description>When an Onboarding Task with a type=Hardware Training is marked as completed update the related asset + children to be deployed; set Pending Device as = Training Completed
+
+2026-07-30: INC3-91 Phase 3 - No longer creates Asset_Assignment__c via the legacy shared writer. Update_Asset_Status now also stamps Status=&quot;Deployed&quot; and Status_Change_Notes__c=&quot;Deployed via Hardware Training completion&quot; on the in-memory Get_Asset record; a new Update_Deployed_Asset record update commits it (replacing Create_Deployed_Asset_Assignments), triggering Asset_After_Create_Assignment_on_Status_Change to create the assignment and stamp Current_Assignment__c.</description>
+    <environments>Default</environments>
+    <interviewLabel>Onboarding Task - After - Set Related Asset to Deployed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Onboarding Task - After - Set Related Asset to Deployed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Asset</name>
+        <label>Get Asset</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Asset_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Related_Asset_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Stamp_PD_as_Training_Completed</name>
+        <label>Stamp PD as Training Completed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Asset</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Device_Sold__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Training Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Pending_Device__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Deployed_Asset</name>
+        <label>Update Deployed Asset</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>Get_Asset</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Stamp_PD_as_Training_Completed</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>(1 or 7) AND 2 AND 3 AND (4 OR 5 or 6)</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Hardware Training</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Related_Asset_ID__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Task__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Complete Trios Training</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Task__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Complete ICAM Training</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Task__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Complete X3 Training</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Not Needed</stringValue>
+            </value>
+        </filters>
+        <object>Onboarding_Task__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Update_Child_Assets</name>
+        <label>Update Child Assets</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Deployed_Asset</targetReference>
+        </connector>
+        <flowName>Asset_Management_Subflow_Update_Child_Statuses</flowName>
+        <inputAssignments>
+            <name>inputAsset</name>
+            <value>
+                <elementReference>Get_Asset</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>inputNotes</name>
+            <value>
+                <stringValue>Deployed via Hardware Training completion</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>inputStatus</name>
+            <value>
+                <stringValue>Deployed</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

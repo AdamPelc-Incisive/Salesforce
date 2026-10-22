@@ -1,0 +1,43 @@
+<apex:page title="New PandaDoc Document" showHeader="true" sidebar="false" controller="pandadoc.CreateNewPandaDocController" action="{!afterLoad}">
+    <c:SDKResources />
+    <apex:includeScript value="/support/console/44.0/integration.js"/>
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/pandaDocSetup.js')}" />
+
+    <style>
+        .pandadoc-doc-editor {
+            width:100%;
+            height:780px;
+            border:1px solid #DDD;
+        }
+    </style>
+    <apex:pageMessages />
+    <div class="bPageTitle">
+        <div class="ptBody">
+            <div class="content">
+                <img src="/s.gif" alt="PandaDoc Document" class="pageTitleIcon" title="PandaDoc Document"/>
+                <h1 class="pageType">PandaDoc Document Edit<span class="titleSeparatingColon">:</span></h1>
+                <h2 class="pageDescription">New PandaDoc Document</h2>
+            </div>
+        </div>
+        <div class="ptBreadcrumb">
+            &nbsp;«&nbsp;
+            <a href="/{!$CurrentPage.parameters.ObjectId}" onclick="return closeConsole();">Back</a>
+        </div>
+    </div>
+
+    <div id="pandadoc_editor" class=""></div>
+
+    <script type="text/javascript">
+        var PANDADOC_DOCUMENT_DATA =  JSON.parse("{!JSENCODE(JSONString)}");
+        PANDADOC_DOCUMENT_DATA.variables.map(variable => {
+            if (variable.type === 'money') {
+                variable.currency = variable.value.currency;
+                variable.value = variable.value.value;
+            }
+            return variable;
+        });
+
+        PandaDoc.Config.SDK_APP = '{!JSENCODE(PANDADOC_APP_HOST)}';
+        PandaDoc.Salesforce.setupEditor('#pandadoc_editor', PANDADOC_DOCUMENT_DATA);
+    </script>
+</apex:page>

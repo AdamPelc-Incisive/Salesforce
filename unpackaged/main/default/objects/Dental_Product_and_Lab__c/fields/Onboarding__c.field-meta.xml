@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Onboarding</label>
+    <referenceTo>Onboarding__c</referenceTo>
+    <relationshipLabel>Dental Product and Labs</relationshipLabel>
+    <relationshipName>Expected_Products_and_Labs</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

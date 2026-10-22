@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Practice_Account__c</fullName>
+    <formula>IF(Practice_ID__c&gt;0,TRUE,FALSE)</formula>
+    <inlineHelpText>Checked if this is a practice account (account has practice id)</inlineHelpText>
+    <label>Is Practice Account</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

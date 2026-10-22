@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ICAM</fullName>
+        <default>false</default>
+        <label>ICAM</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios 3</fullName>
+        <default>false</default>
+        <label>Trios 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios 5</fullName>
+        <default>false</default>
+        <label>Trios 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios 6</fullName>
+        <default>false</default>
+        <label>Trios 6</label>
+    </customValue>
+    <customValue>
+        <fullName>X3</fullName>
+        <default>false</default>
+        <label>X3</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios Core</fullName>
+        <default>false</default>
+        <label>Trios Core</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <description>Scanners supported by Incisive</description>
+    <masterLabel>Incisive Scanners</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

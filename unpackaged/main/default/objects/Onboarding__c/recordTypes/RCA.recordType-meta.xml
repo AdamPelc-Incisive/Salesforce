@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCA</fullName>
+    <active>true</active>
+    <description>At-risk account root cause analysis workflow. Stages: Investigation, Remediation, Verification, Closed. (INC3-30)</description>
+    <label>RCA</label>
+    <picklistValues>
+        <picklist>Contributing_Factors__c</picklist>
+        <values>
+            <fullName>Commercial %2F Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive Displacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding Gap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice-Side Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner Workflow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investigation_Outcome__c</picklist>
+        <values>
+            <fullName>Direct to Closed-Lost Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalate to Cancellation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Save confirmed without remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Save in progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onboarding_Tasks__c</picklist>
+        <values>
+            <fullName>Check In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Incisive Overview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create TDL Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deliver RCA to Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incisive Onboarding Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incisive Onboarding Call %28Lab Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Align Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Incisive Overview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submit Order Email to iTero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Health Status</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Root_Cause__c</picklist>
+        <values>
+            <fullName>Commercial %2F Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive Displacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding Gap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice-Side Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner Workflow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RCA_Equipment_Type__c</picklist>
+        <values>
+            <fullName>ICAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trios 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trios 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trios 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trios Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RCA_Primary_Lab__c</picklist>
+        <values>
+            <fullName>Biotec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClearCorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DaVinci</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthobrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SKDLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remediation_Action__c</picklist>
+        <values>
+            <fullName>Account plan reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit %2F billing adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom pricing adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware swap or repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab network change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum waiver %281 quarter%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No remediation - escalate to Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding redo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow intervention %2F re-training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_Severity__c</picklist>
+        <values>
+            <fullName>At-Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Watch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_Signal_Source__c</picklist>
+        <values>
+            <fullName>Billing dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSM observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health score auto-trigger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab partner flag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neodent %2F channel rep flag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice direct outreach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support ticket pattern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Usage drop alert</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Specific_Reason_Codes__c</picklist>
+        <values>
+            <fullName>Account not properly qualified at sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing dispute unresolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle %2F scanner cost concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camera or port failures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor pricing materially lower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connectivity %2F network issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact info lost in migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSO %2F pilot program ending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dandy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defective unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct manufacturer purchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor C%26B workflow preference mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor preference change %28non-Incisive%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esthetic inconsistency case-to-case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Dandy not transitioned properly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphics card %2F driver issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High occlusion on delivered cases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect scan sequence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient training delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab acknowledged systemic quality issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab declined to continue account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab routing not configured correctly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local lab and practice-owned scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum spend chronically not met</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum spend%2Fshortfall fee concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing items on case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New lab portal rollout disruption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No IT setup at start</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No case status visibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No designated lab point of contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other digital workflow vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ownership change %2F corporate purchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pace mismatch %28too slow%2Fstructured%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per-case pricing transparency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone %2F Slack unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal usability %2F confusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice acquired or closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice strategy shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice unaware of Incisive at sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing%2Fminimums miscommunicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactive instead of proactive updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remake rate above threshold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repeat issues across multiple units</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to analog workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rx %2F case notes not followed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner lag or button failures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner not fit for case mix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short crowns %2F margin issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software crashes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff not adopting scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staffing change %28key user left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAT expectation misalignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tight interproximal contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDO %2F occlusion errors from workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volume mismatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow capability gap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow friction on removable cases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow training incomplete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investigation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>RCA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Usage_Trend__c</picklist>
+        <values>
+            <fullName>Declining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zero use</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

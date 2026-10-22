@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to button to launch flow to generate a corporate or practice id</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Generate Account IDs</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Generate_Account_Numbers__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>
