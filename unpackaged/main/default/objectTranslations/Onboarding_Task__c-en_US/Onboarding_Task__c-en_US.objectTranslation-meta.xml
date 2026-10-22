@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboarding Tasks</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Onboarding Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Mark Completed --></label>
+        <name>Mark_Completed</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Mark Not Needed --></label>
+        <name>Mark_Not_Needed</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Mark Scheduled --></label>
+        <name>Mark_Scheduled</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- &apos;No Response&apos; can only be used on the Technical Preferences Complete task. --></errorMessage>
+        <name>No_Response_Tech_Prefs_Only</name>
+    </validationRules>
+</CustomObjectTranslation>

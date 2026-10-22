@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Delayed Navigation Button V3</masterLabel>
+    <description>Delays Flow output publication and navigation until screen inputs finish committing.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property
+                name="buttonLabel"
+                type="String"
+                label="Button Label"
+                description="Text displayed on the button."
+                default="Continue"
+                role="inputOnly"
+            />
+            <property
+                name="actionValue"
+                type="String"
+                label="Action Value"
+                description="Value returned to the Flow when the button is clicked."
+                default="next"
+                role="inputOnly"
+            />
+            <property
+                name="iconName"
+                type="String"
+                label="Icon Name"
+                description="SLDS icon name, such as utility:record_update. Leave blank for no icon."
+                role="inputOnly"
+            />
+            <property
+                name="iconPosition"
+                type="String"
+                label="Icon Position"
+                description="Icon position: left or right."
+                default="left"
+                role="inputOnly"
+            />
+            <property
+                name="variant"
+                type="String"
+                label="Button Variant"
+                description="Lightning button variant, such as brand or neutral."
+                default="brand"
+                role="inputOnly"
+            />
+            <property
+                name="alignment"
+                type="String"
+                label="Alignment"
+                description="Button alignment: left, center, or right."
+                default="right"
+                role="inputOnly"
+            />
+            <property
+                name="delayMs"
+                type="Integer"
+                label="Navigation Delay (Milliseconds)"
+                description="Delay after focus transfer and before publishing the Flow output."
+                default="250"
+                role="inputOnly"
+            />
+            <property
+                name="value"
+                type="String"
+                label="OUT - Action Value"
+                description="The configured action value after the button is clicked."
+                role="outputOnly"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

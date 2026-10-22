@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone</fullName>
+    <description>[PORTAL] Synced to Incisive Portal for Practice and Lab accounts (phone). NOT currently synced for Dental Group accounts. Confirm with RevOps before changing.</description>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

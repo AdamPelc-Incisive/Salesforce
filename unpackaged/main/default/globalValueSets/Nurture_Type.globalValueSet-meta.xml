@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Lost Opportunity</fullName>
+        <default>false</default>
+        <label>Lost Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Never Reached Opportunity</fullName>
+        <default>false</default>
+        <label>Never Reached Opportunity</label>
+    </customValue>
+    <description>categorize leads/contacts that are in nurture lifecycle stages</description>
+    <masterLabel>Nurture Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name</fullName>
+    <description>[PORTAL] Synced to Incisive Portal as the account name, and read from Parent to populate dental_group_name (staged only). Confirm with RevOps before changing.</description>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId"       type="String"  label="Record ID"            description="Salesforce Record ID to include in the message." />
+            <property name="action"         type="String"  label="Action"               description="Action label (e.g. selected, submitted, cancelled)." />
+            <property name="sessionId"      type="String"  label="Session ID"           description="Required ID used to correlate Asset Management flow messages." />
+            <property name="status"         type="String"  label="Status"               description="Status value (e.g. success, pending, error)." />
+            <property name="publishSuccess" type="Boolean" label="OUT - Publish Success" description="True if message published successfully." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

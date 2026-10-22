@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Flag this account at risk and create an RCA onboarding with its standard tasks</description>
+    <flowDefinition>Account_Screenflow_Create_RCA</flowDefinition>
+    <label>Create RCA</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

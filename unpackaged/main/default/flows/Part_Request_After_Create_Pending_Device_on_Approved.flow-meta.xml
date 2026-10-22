@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Creates a Pending Device record (Status = Ordered, Practice Account from Part Request) when a Part Request is moved to Approved.
+
+2026-05-18: BN - Stamp corporate parent account + Part Request record</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Pending_Device_Name</name>
+        <dataType>String</dataType>
+        <expression>IF(LEN({!$Record.Requested_Part__r.Name}) &gt; 75, 
+   LEFT({!$Record.Requested_Part__r.Name}, 72) &amp; &quot;...&quot;, 
+   {!$Record.Requested_Part__r.Name}) 
+&amp; &quot; for &quot; &amp; 
+IF(LEN({!$Record.Practice_Account__r.Name}) &gt; 75 - LEN(LEFT({!$Record.Requested_Part__r.Name}, 75)),
+   LEFT({!$Record.Practice_Account__r.Name}, MAX(75 - LEN(LEFT({!$Record.Requested_Part__r.Name}, 75)) - 3, 0)) &amp; &quot;...&quot;,
+   {!$Record.Practice_Account__r.Name})</expression>
+    </formulas>
+    <interviewLabel>Part Request - After - Create Pending Device on Approved {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Part Request - After - Create Pending Device on Approved</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Pending_Device</name>
+        <label>Create Pending Device</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Stamp_Pending_Device_on_Part_Request</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Corporate_Account__c</field>
+            <value>
+                <elementReference>$Record.Practice_Account__r.ParentId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Pending_Device_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Part_Request__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Practice_Account__c</field>
+            <value>
+                <elementReference>$Record.Practice_Account__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Requested_Part__c</field>
+            <value>
+                <elementReference>$Record.Requested_Part__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Ordered</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <stringValue>Part Request</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Pending_Device__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Stamp_Pending_Device_on_Part_Request</name>
+        <label>Stamp Pending Device on Part Request</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Pending_Device__c</field>
+            <value>
+                <elementReference>Create_Pending_Device</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Pending_Device</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <object>Part_Request__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

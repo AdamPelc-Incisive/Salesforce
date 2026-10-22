@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Send Welcome Email</fullName>
+        <default>false</default>
+        <label>Send Welcome Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage Trios 5</fullName>
+        <default>false</default>
+        <label>Stage Trios 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage Trios 6</fullName>
+        <default>false</default>
+        <label>Stage Trios 6</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage Trios 3</fullName>
+        <default>false</default>
+        <label>Stage Trios 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage Trios Core</fullName>
+        <default>false</default>
+        <label>Stage Trios Core</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage X3</fullName>
+        <default>false</default>
+        <label>Stage X3</label>
+    </customValue>
+    <customValue>
+        <fullName>Stage ICAM</fullName>
+        <default>false</default>
+        <label>Stage ICAM</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship Trios 6</fullName>
+        <default>false</default>
+        <label>Ship Trios 6</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship Trios 5</fullName>
+        <default>false</default>
+        <label>Ship Trios 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship Trios 3</fullName>
+        <default>false</default>
+        <label>Ship Trios 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship Trios Core</fullName>
+        <default>false</default>
+        <label>Ship Trios Core</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship ICAM</fullName>
+        <default>false</default>
+        <label>Ship ICAM</label>
+    </customValue>
+    <customValue>
+        <fullName>Ship X3</fullName>
+        <default>false</default>
+        <label>Ship X3</label>
+    </customValue>
+    <customValue>
+        <fullName>Send Equipment Shipped Email</fullName>
+        <default>false</default>
+        <label>Send Equipment Shipped Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Incisive Onboarding Call (Lab Only)</fullName>
+        <default>false</default>
+        <label>Incisive Onboarding Call (Lab Only)</label>
+    </customValue>
+    <customValue>
+        <fullName>Create/Merge 3Shape Accounts</fullName>
+        <default>false</default>
+        <label>Create/Merge 3Shape Accounts</label>
+    </customValue>
+    <customValue>
+        <fullName>Create SKDLA Account</fullName>
+        <default>false</default>
+        <label>Create SKDLA Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Create Power Account</fullName>
+        <default>false</default>
+        <label>Create Power Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Create CCDL Account</fullName>
+        <default>false</default>
+        <label>Create CCDL Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Create Orthobrain Account</fullName>
+        <default>false</default>
+        <label>Create Orthobrain Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Create BioTec Account</fullName>
+        <default>false</default>
+        <label>Create BioTec Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Create Universal Account</fullName>
+        <default>false</default>
+        <label>Create Universal Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule ICAM Unboxing</fullName>
+        <default>false</default>
+        <label>Schedule ICAM Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete ICAM Unboxing</fullName>
+        <default>false</default>
+        <label>Complete ICAM Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule Trios Unboxing</fullName>
+        <default>false</default>
+        <label>Schedule Trios Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete Trios Unboxing</fullName>
+        <default>false</default>
+        <label>Complete Trios Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule X3 Unboxing</fullName>
+        <default>false</default>
+        <label>Schedule X3 Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete X3 Unboxing</fullName>
+        <default>false</default>
+        <label>Complete X3 Unboxing</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Preferences Complete</fullName>
+        <default>false</default>
+        <label>Technical Preferences Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule Trios Training</fullName>
+        <default>false</default>
+        <label>Schedule Trios Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete Trios Training</fullName>
+        <default>false</default>
+        <label>Complete Trios Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule ICAM Training</fullName>
+        <default>false</default>
+        <label>Schedule ICAM Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete ICAM Training</fullName>
+        <default>false</default>
+        <label>Complete ICAM Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule X3 Training</fullName>
+        <default>false</default>
+        <label>Schedule X3 Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete X3 Training</fullName>
+        <default>false</default>
+        <label>Complete X3 Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Training – SKDLA AOX</fullName>
+        <default>false</default>
+        <label>Workflow Training – SKDLA AOX</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Training – Power AOX</fullName>
+        <default>false</default>
+        <label>Workflow Training – Power AOX</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Training – DV High Esthetics</fullName>
+        <default>false</default>
+        <label>Workflow Training – DV High Esthetics</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Training – Aligners</fullName>
+        <default>false</default>
+        <label>Workflow Training – Aligners</label>
+    </customValue>
+    <customValue>
+        <fullName>First Case Sent</fullName>
+        <default>false</default>
+        <label>First Case Sent</label>
+    </customValue>
+    <customValue>
+        <fullName>Collect First Case Feedback</fullName>
+        <default>false</default>
+        <label>Collect First Case Feedback</label>
+    </customValue>
+    <customValue>
+        <fullName>Convert Subscription ID</fullName>
+        <default>false</default>
+        <label>Convert Subscription ID</label>
+    </customValue>
+    <customValue>
+        <fullName>Create Return Label</fullName>
+        <default>false</default>
+        <label>Create Return Label</label>
+    </customValue>
+    <customValue>
+        <fullName>Retire Old Scanner</fullName>
+        <default>false</default>
+        <label>Retire Old Scanner</label>
+    </customValue>
+    <customValue>
+        <fullName>Send Return Instructions</fullName>
+        <default>false</default>
+        <label>Send Return Instructions</label>
+    </customValue>
+    <customValue>
+        <fullName>Collect Replacement Scanner Serial Number</fullName>
+        <default>false</default>
+        <label>Collect Replacement Scanner Serial Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Send Downgrade Docusign</fullName>
+        <default>false</default>
+        <label>Send Downgrade Docusign</label>
+    </customValue>
+    <customValue>
+        <fullName>Return Scanner to Inventory</fullName>
+        <default>false</default>
+        <label>Return Scanner to Inventory</label>
+    </customValue>
+    <customValue>
+        <fullName>Issue Final Invoice</fullName>
+        <default>false</default>
+        <label>Issue Final Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>RCA</fullName>
+        <default>false</default>
+        <label>RCA</label>
+    </customValue>
+    <customValue>
+        <fullName>Deliver RCA to Practice</fullName>
+        <default>false</default>
+        <label>Deliver RCA to Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>Check In</fullName>
+        <default>false</default>
+        <label>Check In</label>
+    </customValue>
+    <customValue>
+        <fullName>Update Health Status</fullName>
+        <default>false</default>
+        <label>Update Health Status</label>
+    </customValue>
+    <customValue>
+        <fullName>Submit Order Email to iTero</fullName>
+        <default>false</default>
+        <label>Submit Order Email to iTero</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule Incisive Overview</fullName>
+        <default>false</default>
+        <label>Schedule Incisive Overview</label>
+    </customValue>
+    <customValue>
+        <fullName>Complete Incisive Overview</fullName>
+        <default>false</default>
+        <label>Complete Incisive Overview</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule Align Training</fullName>
+        <default>false</default>
+        <label>Schedule Align Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Create TDL Account</fullName>
+        <default>false</default>
+        <label>Create TDL Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Incisive Onboarding Call</fullName>
+        <default>false</default>
+        <label>Incisive Onboarding Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Lab Portals Created</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lab Portals Created</label>
+    </customValue>
+    <customValue>
+        <fullName>Lab Accounts Created</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lab Accounts Created</label>
+    </customValue>
+    <customValue>
+        <fullName>Monitor Case Volume</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Monitor Case Volume</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Shipped</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Equipment Shipped</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Staged</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Equipment Staged</label>
+    </customValue>
+    <customValue>
+        <fullName>ICAM Training Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ICAM Training Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>ICAM Training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ICAM Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios Training Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trios Training Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Trios Training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trios Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Unboxing Completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unboxing Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unboxing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unboxing</label>
+    </customValue>
+    <masterLabel>Onboarding Tasks</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

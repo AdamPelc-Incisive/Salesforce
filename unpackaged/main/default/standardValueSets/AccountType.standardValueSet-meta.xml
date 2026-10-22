@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>DSO (Doctor Led)</fullName>
+        <default>false</default>
+        <label>DSO (Doctor Led)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DSO (Corporate Led)</fullName>
+        <default>false</default>
+        <label>DSO (Corporate Led)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Private Practice</fullName>
+        <default>false</default>
+        <label>Private Practice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Group Practice</fullName>
+        <default>false</default>
+        <label>Group Practice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Former Customer</fullName>
+        <default>false</default>
+        <label>Former Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dental School</fullName>
+        <default>false</default>
+        <label>Dental School</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lab</fullName>
+        <default>false</default>
+        <label>Lab</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <label>Internal</label>
+    </standardValue>
+</StandardValueSet>

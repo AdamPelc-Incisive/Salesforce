@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>Onboarding_New_Sale</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Onboarding - New Sale</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>New_Sales</recordTypeName>
+    <sobjectType>Onboarding__c</sobjectType>
+    <targetField>Stage__c</targetField>
+    <targetFieldChangeToValues>Onboarded</targetFieldChangeToValues>
+</AnimationRule>

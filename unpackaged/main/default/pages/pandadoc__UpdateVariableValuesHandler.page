@@ -1,0 +1,24 @@
+<apex:page id="UpdateVariableValuesHandler" controller="pandadoc.UpdateVariableValuesHandlerCtrl"
+    title="Export PandaDoc variables to Salesforce Settings">
+    <c:SObjectMapping />
+    <apex:slds />
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/configureVariablesMapping.js')}" />
+
+    <apex:form >
+        <apex:actionFunction name="getBack" action="{!getBack}" />
+    </apex:form>
+
+    <div id="approot"></div>
+    <script>
+        window.__initial_state__ = JSON.parse('{!JSENCODE(initialState)}');
+        window.__global_config__ = {
+            slds_assets: '{!JSENCODE(URLFOR($Asset.SLDS))}',
+            cancel_method: getBack,
+            systemVariables: JSON.parse('{!JSENCODE(systemVariables)}'),
+        }
+        window.__remote_actions__ = {
+            'saveMappings': '{!$RemoteAction.UpdateVariableValuesHandlerCtrl.saveMappings}',
+            'getTemplateLabels': '{!$RemoteAction.UpdateVariableValuesHandlerCtrl.getTemplateLabels}'
+        };
+    </script>
+</apex:page>

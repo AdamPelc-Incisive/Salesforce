@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_for_Downgraded_Device__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Required for Downgraded Device</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

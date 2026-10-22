@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role__c</fullName>
+    <label>Contact Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dentist - Owner</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Dentist - Owner</label>
+            </value>
+            <value>
+                <fullName>Dental Assistant</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Dental Assistant</label>
+            </value>
+            <value>
+                <fullName>Office Manager</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Office Manager</label>
+            </value>
+            <value>
+                <fullName>Dentist Associate</fullName>
+                <default>false</default>
+                <label>Dentist Associate</label>
+            </value>
+            <value>
+                <fullName>Front Desk</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Front Desk</label>
+            </value>
+            <value>
+                <fullName>Hygienist</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Hygienist</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Corporate Accountant</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Corporate Accountant</label>
+            </value>
+            <value>
+                <fullName>Signatory</fullName>
+                <color>#FFFFFF</color>
+                <default>false</default>
+                <label>Signatory</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

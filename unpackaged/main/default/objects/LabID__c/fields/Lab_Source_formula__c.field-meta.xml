@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lab_Source_formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>Lab_Source__r.Name</formula>
+    <inlineHelpText>Text name of Lab - used for rollups</inlineHelpText>
+    <label>Lab Source (formula)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

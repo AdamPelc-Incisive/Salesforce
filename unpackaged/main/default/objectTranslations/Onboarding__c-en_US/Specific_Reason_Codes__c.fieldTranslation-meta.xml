@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Specific reason codes for the at-risk situation. Available values depend on the selected Primary Root Cause. --></help>
+        <label><!-- Specific Reason Codes --></label>
+        <name>Specific_Reason_Codes__c</name>
+        <picklistValues>
+            <masterLabel>Account not properly qualified at sale</masterLabel>
+            <translation><!-- Account not properly qualified at sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing dispute unresolved</masterLabel>
+            <translation><!-- Billing dispute unresolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bundle / scanner cost concerns</masterLabel>
+            <translation><!-- Bundle / scanner cost concerns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camera or port failures</masterLabel>
+            <translation><!-- Camera or port failures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor pricing materially lower</masterLabel>
+            <translation><!-- Competitor pricing materially lower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connectivity / network issue</masterLabel>
+            <translation><!-- Connectivity / network issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact info lost in migration</masterLabel>
+            <translation><!-- Contact info lost in migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DSO / pilot program ending</masterLabel>
+            <translation><!-- DSO / pilot program ending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dandy</masterLabel>
+            <translation><!-- Dandy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defective unit</masterLabel>
+            <translation><!-- Defective unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct manufacturer purchase</masterLabel>
+            <translation><!-- Direct manufacturer purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor C&amp;B workflow preference mismatch</masterLabel>
+            <translation><!-- Doctor C&amp;B workflow preference mismatch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor preference change (non-Incisive)</masterLabel>
+            <translation><!-- Doctor preference change (non-Incisive) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esthetic inconsistency case-to-case</masterLabel>
+            <translation><!-- Esthetic inconsistency case-to-case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former Dandy not transitioned properly</masterLabel>
+            <translation><!-- Former Dandy not transitioned properly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graphics card / driver issue</masterLabel>
+            <translation><!-- Graphics card / driver issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High occlusion on delivered cases</masterLabel>
+            <translation><!-- High occlusion on delivered cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect scan sequence</masterLabel>
+            <translation><!-- Incorrect scan sequence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insufficient training delivered</masterLabel>
+            <translation><!-- Insufficient training delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab acknowledged systemic quality issue</masterLabel>
+            <translation><!-- Lab acknowledged systemic quality issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab declined to continue account</masterLabel>
+            <translation><!-- Lab declined to continue account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab routing not configured correctly</masterLabel>
+            <translation><!-- Lab routing not configured correctly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local lab and practice-owned scanner</masterLabel>
+            <translation><!-- Local lab and practice-owned scanner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimum spend chronically not met</masterLabel>
+            <translation><!-- Minimum spend chronically not met --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimum spend/shortfall fee concern</masterLabel>
+            <translation><!-- Minimum spend/shortfall fee concern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing items on case</masterLabel>
+            <translation><!-- Missing items on case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New lab portal rollout disruption</masterLabel>
+            <translation><!-- New lab portal rollout disruption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No IT setup at start</masterLabel>
+            <translation><!-- No IT setup at start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No case status visibility</masterLabel>
+            <translation><!-- No case status visibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No designated lab point of contact</masterLabel>
+            <translation><!-- No designated lab point of contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other digital workflow vendor</masterLabel>
+            <translation><!-- Other digital workflow vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ownership change / corporate purchase</masterLabel>
+            <translation><!-- Ownership change / corporate purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pace mismatch (too slow/structured)</masterLabel>
+            <translation><!-- Pace mismatch (too slow/structured) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per-case pricing transparency</masterLabel>
+            <translation><!-- Per-case pricing transparency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone / Slack unresponsive</masterLabel>
+            <translation><!-- Phone / Slack unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portal usability / confusion</masterLabel>
+            <translation><!-- Portal usability / confusion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice acquired or closing</masterLabel>
+            <translation><!-- Practice acquired or closing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice strategy shift</masterLabel>
+            <translation><!-- Practice strategy shift --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice unaware of Incisive at sale</masterLabel>
+            <translation><!-- Practice unaware of Incisive at sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing/minimums miscommunicated</masterLabel>
+            <translation><!-- Pricing/minimums miscommunicated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reactive instead of proactive updates</masterLabel>
+            <translation><!-- Reactive instead of proactive updates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remake rate above threshold</masterLabel>
+            <translation><!-- Remake rate above threshold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repeat issues across multiple units</masterLabel>
+            <translation><!-- Repeat issues across multiple units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Returned to analog workflow</masterLabel>
+            <translation><!-- Returned to analog workflow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rx / case notes not followed</masterLabel>
+            <translation><!-- Rx / case notes not followed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scanner lag or button failures</masterLabel>
+            <translation><!-- Scanner lag or button failures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scanner not fit for case mix</masterLabel>
+            <translation><!-- Scanner not fit for case mix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short crowns / margin issues</masterLabel>
+            <translation><!-- Short crowns / margin issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software crashes</masterLabel>
+            <translation><!-- Software crashes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty mismatch</masterLabel>
+            <translation><!-- Specialty mismatch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staff not adopting scanner</masterLabel>
+            <translation><!-- Staff not adopting scanner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staffing change (key user left)</masterLabel>
+            <translation><!-- Staffing change (key user left) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAT expectation misalignment</masterLabel>
+            <translation><!-- TAT expectation misalignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tight interproximal contacts</masterLabel>
+            <translation><!-- Tight interproximal contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VDO / occlusion errors from workflow</masterLabel>
+            <translation><!-- VDO / occlusion errors from workflow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volume mismatch</masterLabel>
+            <translation><!-- Volume mismatch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow capability gap</masterLabel>
+            <translation><!-- Workflow capability gap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow friction on removable cases</masterLabel>
+            <translation><!-- Workflow friction on removable cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow training incomplete</masterLabel>
+            <translation><!-- Workflow training incomplete --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

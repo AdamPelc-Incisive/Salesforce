@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scanner Downgrade</fullName>
+        <default>false</default>
+        <label>Scanner Downgrade</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Non-Scanner Downgrade</fullName>
+        <default>false</default>
+        <label>Non-Scanner Downgrade</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Churn</fullName>
+        <default>false</default>
+        <label>Churn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Scanner</fullName>
+        <default>false</default>
+        <label>New Scanner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scanner Upgrade</fullName>
+        <default>false</default>
+        <label>Scanner Upgrade</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Full Save</fullName>
+        <default>false</default>
+        <label>Full Save</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exchange</fullName>
+        <default>false</default>
+        <label>Exchange</label>
+    </standardValue>
+</StandardValueSet>

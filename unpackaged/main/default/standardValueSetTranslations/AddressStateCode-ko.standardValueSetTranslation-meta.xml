@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Alabama</masterLabel>
+        <translation>앨라배마</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alaska</masterLabel>
+        <translation>알래스카</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alberta</masterLabel>
+        <translation>알버타</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arizona</masterLabel>
+        <translation>애리조나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arkansas</masterLabel>
+        <translation>아칸소</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>British Columbia</masterLabel>
+        <translation>브리티시 컬럼비아</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>California</masterLabel>
+        <translation>캘리포니아</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Colorado</masterLabel>
+        <translation>콜로라도</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Connecticut</masterLabel>
+        <translation>코네티컷</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delaware</masterLabel>
+        <translation>델라웨어</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>District of Columbia</masterLabel>
+        <translation>컬럼비아 특별구</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Florida</masterLabel>
+        <translation>플로리다</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Georgia</masterLabel>
+        <translation>그루지야</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hawaii</masterLabel>
+        <translation>하와이</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Idaho</masterLabel>
+        <translation>아이다호</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Illinois</masterLabel>
+        <translation>일리노이</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Indiana</masterLabel>
+        <translation>인디애나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Iowa</masterLabel>
+        <translation>아이오와</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kansas</masterLabel>
+        <translation>캔자스</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kentucky</masterLabel>
+        <translation>켄터키</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Louisiana</masterLabel>
+        <translation>루이지애나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maine</masterLabel>
+        <translation>메인</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Manitoba</masterLabel>
+        <translation>매니토바</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maryland</masterLabel>
+        <translation>메릴랜드</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Massachusetts</masterLabel>
+        <translation>매사추세츠</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Michigan</masterLabel>
+        <translation>미시간</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Minnesota</masterLabel>
+        <translation>미네소타</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mississippi</masterLabel>
+        <translation>미시시피</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Missouri</masterLabel>
+        <translation>미주리</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Montana</masterLabel>
+        <translation>몬태나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nebraska</masterLabel>
+        <translation>네브래스카</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nevada</masterLabel>
+        <translation>네바다</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Brunswick</masterLabel>
+        <translation>뉴브런즈윅</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Hampshire</masterLabel>
+        <translation>뉴햄프셔</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Jersey</masterLabel>
+        <translation>뉴저지</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Mexico</masterLabel>
+        <translation>뉴멕시코</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New York</masterLabel>
+        <translation>뉴욕</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Newfoundland and Labrador</masterLabel>
+        <translation>뉴펀들랜드 래브라도</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Carolina</masterLabel>
+        <translation>노스캐롤라이나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Dakota</masterLabel>
+        <translation>노스다코타</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Northwest Territories</masterLabel>
+        <translation>노스웨스트 준주</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nova Scotia</masterLabel>
+        <translation>노바스코샤</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nunavut</masterLabel>
+        <translation>누나부트</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ohio</masterLabel>
+        <translation>오하이오</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oklahoma</masterLabel>
+        <translation>오클라호마</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ontario</masterLabel>
+        <translation>온타리오</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oregon</masterLabel>
+        <translation>오리건</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pennsylvania</masterLabel>
+        <translation>펜실베이니아</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prince Edward Island</masterLabel>
+        <translation>프린스 에드워드 아일랜드</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Quebec</masterLabel>
+        <translation>퀘벡</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rhode Island</masterLabel>
+        <translation>로드아일랜드</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Saskatchewan</masterLabel>
+        <translation>서스캐처원</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Carolina</masterLabel>
+        <translation>사우스캐롤라이나</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Dakota</masterLabel>
+        <translation>사우스다코타</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tennessee</masterLabel>
+        <translation>테네시</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Texas</masterLabel>
+        <translation>텍사스</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Utah</masterLabel>
+        <translation>유타</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vermont</masterLabel>
+        <translation>버몬트</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Virginia</masterLabel>
+        <translation>버지니아</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Washington</masterLabel>
+        <translation>워싱턴</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>West Virginia</masterLabel>
+        <translation>웨스트버지니아</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wisconsin</masterLabel>
+        <translation>위스콘신</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wyoming</masterLabel>
+        <translation>와이오밍</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Yukon Territories</masterLabel>
+        <translation>유콘 지역</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

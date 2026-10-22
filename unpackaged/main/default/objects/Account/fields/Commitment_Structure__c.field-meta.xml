@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commitment_Structure__c</fullName>
+    <description>Indicates whether subscription minimums are measured at corporate or practice level.  Corp = Mins measured in aggregate across all locations; Practice= Mins per location (INC3-10)</description>
+    <inlineHelpText>Indicates whether subscription minimums are measured at corporate or practice level.  Corp = Mins measured in aggregate across all locations; Practice= Mins per location</inlineHelpText>
+    <label>Commitment Structure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CorporateOrPractice</valueSetName>
+    </valueSet>
+</CustomField>

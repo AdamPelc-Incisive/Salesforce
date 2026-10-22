@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parts_Approval_Part_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Parts Approval</label>
+    <queue>Parts_Approval</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

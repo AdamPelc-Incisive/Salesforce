@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Task_2026</fullName>
+    <fields>Task__c</fields>
+    <fields>Onboarding__c</fields>
+    <fields>Assigned_to__c</fields>
+    <label>Onboarding Task 2026</label>
+</CompactLayout>

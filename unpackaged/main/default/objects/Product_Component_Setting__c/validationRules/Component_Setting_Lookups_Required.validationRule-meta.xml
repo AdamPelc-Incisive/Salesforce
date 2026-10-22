@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Component_Setting_Lookups_Required</fullName>
+    <active>false</active>
+    <description>Required via validation rule instead of field-level required to avoid exceeding Product2&#39;s limit on child lookups with Restrict/Cascade delete behavior.</description>
+    <errorConditionFormula>ISBLANK(Product__c) || ISBLANK(Required_for_Product__c)</errorConditionFormula>
+    <errorMessage>Both Product and Required for Product are required.</errorMessage>
+</ValidationRule>

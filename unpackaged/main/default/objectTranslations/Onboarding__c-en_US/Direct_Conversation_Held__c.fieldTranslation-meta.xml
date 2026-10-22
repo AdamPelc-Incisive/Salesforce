@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Checked if a direct conversation was held with the practice during the investigation. --></help>
+        <label><!-- Direct Conversation Held --></label>
+        <name>Direct_Conversation_Held__c</name>
+    </CustomFieldTranslation>

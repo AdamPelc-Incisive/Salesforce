@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The Standard Json Builder uses this field to form additional recipients. Enter a semicolon-separated list of field API names here (lookups). --></help>
+        <label><!-- Referenced Recipients --></label>
+        <name>pandadoc__ReferencedRecipients__c</name>
+    </CustomFieldTranslation>

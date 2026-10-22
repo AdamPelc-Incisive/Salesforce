@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>santhoshs@p-signal.com</contactEmail>
+    <contactPhone>925-963-9582</contactPhone>
+    <distributionState>Packaged</distributionState>
+    <isProtected>false</isProtected>
+    <label>Data Portal API</label>
+    <orgScopedExternalApp>00Dao00001NZBKb:Data_Portal_API</orgScopedExternalApp>
+</ExternalClientApplication>

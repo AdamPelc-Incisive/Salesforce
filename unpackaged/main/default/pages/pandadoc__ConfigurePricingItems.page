@@ -1,0 +1,168 @@
+<apex:page id="ConfigurePricingItems"
+        controller="pandadoc.ConfigurePricingItemsCtrl"
+        sideBar="false"
+        title="Configuring pricing items mapping">
+
+    <apex:stylesheet value="{!URLFOR($Resource.pandadoc__RecipientsPage, '/styles.css')}" />
+    <c:SObjectMapping />
+
+    <apex:form id="mappingForm">
+        <apex:actionFunction name="removeMapping" action="{!delItem}" reRender="mappingForm" onComplete="initFieldSelectors();">
+            <apex:param value="" name="selectedObjectToDelete" assignTo="{!selectedObjectToDelete}" />
+        </apex:actionFunction>
+
+        <apex:pageBlock title="Add pricing item mapping">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Choose an object to set up product mapping for"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem >
+                    <span style="text-align: left">
+                        <select class="smart-objects" map-to="{!$Component.selectedObject}">
+                            <option value="">Select new object</option>
+                        </select>
+                    </span>
+                    <apex:commandButton action="{!addMapping}" value="Add" disabled="{!ObjectsList.size == 0}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:inputHidden value="{!selectedNewObject}" id="selectedObject"/>
+        </apex:pageBlock>
+        <apex:pageBlock title="Pricing item mappings">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" />
+                <apex:commandButton action="{!getBack}" rendered="{!retUrlExist}" value="Cancel" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Map Salesforce product fields with PandaDoc pricing table columns"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockTable value="{!pricingItems}" var="pricingItem" styleClass="objectsTable">
+                <apex:column headerValue="Object" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <span class="used-object" object-name="{!pricingItem.objectType}">{!pricingItem.objectLabel}</span>
+                </apex:column>
+                <apex:column headerValue="SKU field" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <apex:inputHidden value="{!pricingItem.settings.skuField}" id="skuHidden"/>
+                    <apex:inputHidden value="{!pricingItem.settings.nameField}" id="nameHidden"/>
+                    <apex:inputHidden value="{!pricingItem.settings.priceField1}" id="priceFirstHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.priceField2}" id="priceSecondHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.discountField}" id="discountHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.quantityField}" id="quantityHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.firstTaxField}" id="firstTaxHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.secondTaxField}" id="secondTaxHidden" />
+                    <apex:inputHidden value="{!pricingItem.settings.descriptionField}" id="descriptionHidden"/>
+
+                    <select class="smart" value="{!pricingItem.settings.skuField}" objName="{!pricingItem.objectType}" fieldType="text" map-to="{!$Component.skuHidden}">
+                        <option value="{!pricingItem.settings.skuField}">{!pricingItem.skuFieldLabel}</option>
+                    </select>
+                </apex:column>
+                <apex:column headerValue="Name field" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <select class="smart" value="{!pricingItem.settings.nameField}" objName="{!pricingItem.objectType}" fieldType="longtext" map-to="{!$Component.nameHidden}">
+                        <option value="{!pricingItem.settings.nameField}">{!pricingItem.nameFieldLabel}</option>
+                    </select>
+                </apex:column>
+                <apex:column headerValue="Price field" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <div style="margin-bottom: 10px;">
+                        <label>Primary field:</label>
+                        <select class="smart" value="{!pricingItem.settings.priceField1}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.priceFirstHidden}">
+                            <option value="{!pricingItem.settings.priceField1}">{!pricingItem.price1FieldLabel}</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label><span>Additional field:</span><c:helpIcon width="330px" text="Additional field will be used if value in primary field is empty." /></label>
+                        <select class="smart" value="{!pricingItem.settings.priceField2}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.priceSecondHidden}">
+                            <option value="{!pricingItem.settings.priceField2}">{!pricingItem.price2FieldLabel}</option>
+                        </select>
+                    </div>
+                </apex:column>
+                <apex:column headerValue="Discount field" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <select class="smart" value="{!pricingItem.settings.discountField}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.discountHidden}">
+                        <option value="{!pricingItem.settings.discountField}">{!pricingItem.discountFieldLabel}</option>
+                    </select>
+                </apex:column>
+                <apex:column headerValue="Quantity field" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <select class="smart" value="{!pricingItem.settings.quantityField}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.quantityHidden}">
+                        <option value="{!pricingItem.settings.quantityField}">{!pricingItem.quantityFieldLabel}</option>
+                    </select>
+                </apex:column>
+                <apex:column headerValue="Tax" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <div style="margin-bottom: 10px;">
+                        <label>First tax:</label>
+                        <select class="smart" value="{!pricingItem.settings.firstTaxField}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.firstTaxHidden}">
+                            <option value="{!pricingItem.settings.firstTaxField}">{!pricingItem.firstTaxFieldLabel}</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label><span>Second tax:</span><c:helpIcon width="200px" text="Set up an additional tax to be applied to the same product line item."/> </label>
+                        <select class="smart" value="{!pricingItem.settings.secondTaxField}" objName="{!pricingItem.objectType}" fieldType="decimal" map-to="{!$Component.secondTaxHidden}">
+                            <option value="{!pricingItem.settings.secondTaxField}">{!pricingItem.secondTaxFieldLabel}</option>
+                        </select>
+                    </div>
+                </apex:column>
+                <apex:column headerValue="Description" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <select class="smart" value="{!pricingItem.settings.descriptionField}" objName="{!pricingItem.objectType}" fieldType="longtext" map-to="{!$Component.descriptionHidden}">
+                        <option value="{!pricingItem.settings.descriptionField}">{!pricingItem.descriptionFieldsLabel}</option>
+                    </select>
+                </apex:column>
+                <apex:column styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                    <apex:commandButton disabled="{! !pricingItem.removable}"
+                                        value="Remove"
+                                        action="{!null}"
+                                        onClick="removeMapping('{!pricingItem.objectType}'); return false;" />
+                </apex:column>
+            </apex:pageBlockTable>
+
+            <apex:pageBlock title="Pricing Items sorting">
+                <apex:pageBlockSection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Configure how pricing items should be sorted."/>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <div style="height: 5px" />
+                <apex:pageBlockTable value="{!pricingItems}" var="pricingItem" styleClass="objectsTable">
+                    <apex:column headerValue="Object" width="20%" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                        <span class="used-object" object-name="{!pricingItem.objectType}">{!pricingItem.objectLabel}</span>
+                        <apex:inputHidden value="{!pricingItem.settings.primarySortingField}" id="primarySortingHidden"/>
+                        <apex:inputHidden value="{!pricingItem.settings.secondarySortingField}" id="secondarySortingHidden"/>
+                        <apex:inputHidden value="{!pricingItem.settings.sortDirection}" id="sortDirectionHidden" />
+                        <apex:inputHidden value="{!pricingItem.settings.sortNullsPosition}" id="sortNullsPositionHidden" />
+                    </apex:column>
+                    <apex:column headerValue="Sorting fields" width="30%" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                        <div style="margin-bottom: 10px;">
+                            <label>Primary sorting field:</label>
+                            <select class="smart" value="{!pricingItem.settings.primarySortingField}" objName="{!pricingItem.objectType}" fieldType="sortable" map-to="{!$Component.primarySortingHidden}">
+                                <option value="{!pricingItem.settings.primarySortingField}">{!pricingItem.PrimarySortingFieldLabel}</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>
+                                <span>Secondary sorting field:</span>
+                                <c:helpIcon width="380px" text="This field be used if two objects have the same value in primary field."/>
+                            </label>
+                            <select class="smart" value="{!pricingItem.settings.secondarySortingField}" objName="{!pricingItem.objectType}" fieldType="sortable" map-to="{!$Component.secondarySortingHidden}">
+                                <option value="{!pricingItem.settings.secondarySortingField}">{!pricingItem.secondarySortingFieldLabel}</option>
+                            </select>
+                        </div>
+                    </apex:column>
+                    <apex:column headerValue="Sorting settings" width="50%" styleClass="{!IF(pricingItem.addedFromUrl, 'selected-from-url', '')}">
+                        <div style="margin-bottom: 10px;">
+                            <div><label>Sorting order:</label></div>
+                            <div>
+                                <select class="sort-direction" map-to="{!$Component.sortDirectionHidden}"></select>
+                            </div>
+                        </div>
+                        <div>
+                            <div><label>Objects with empty value should goes:</label></div>
+                            <div>
+                                <select class="sort-nulls-position" map-to="{!$Component.sortNullsPositionHidden}"></select>
+                            </div>
+                        </div>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

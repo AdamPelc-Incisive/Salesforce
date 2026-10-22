@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Solid</fullName>
+        <default>false</default>
+        <label>Solid</label>
+    </customValue>
+    <customValue>
+        <fullName>Likely</fullName>
+        <default>false</default>
+        <label>Likely</label>
+    </customValue>
+    <customValue>
+        <fullName>Best Case</fullName>
+        <default>false</default>
+        <label>Best Case</label>
+    </customValue>
+    <customValue>
+        <fullName>Pipeline</fullName>
+        <default>true</default>
+        <label>Pipeline</label>
+    </customValue>
+    <masterLabel>Forecast Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

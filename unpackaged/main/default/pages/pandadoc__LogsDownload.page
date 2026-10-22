@@ -1,0 +1,44 @@
+<apex:page id="LogsDownload"
+        standardController="pandadoc__PandaDocLog__c"
+        recordSetVar="logs"
+        extensions="pandadoc.LogsDownloadController"
+        contentType="application/data#logs.html"
+        readOnly="true"
+        >
+    <style>
+        .overflow-scroll {
+            overflow-x: scroll;
+        }
+        .log-table {
+            table-layout: fixed;
+        }
+    </style>
+
+    <table border="1" width="100%" class="log-table">
+        <colgroup>
+            <col span="1" style="width: 10%;" />
+            <col span="1" style="width: 40%;" />
+            <col span="1" style="width: 50%;"/>
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>Created Date</th>
+                <th>Level/Location</th>
+                <th>Log data</th>
+            </tr>
+        </thead>
+        <tbody>
+        <apex:repeat value="{!logWrappers}" var="log">
+            <tr>
+                <td><apex:outputField value="{!log.obj.CreatedDate}" /></td>
+                <td>
+                    <div>{!log.obj.pandadoc__Level__c}</div>
+                    <div class="overflow-scroll">{!log.obj.pandadoc__Location__c}</div>
+                </td>
+                <td><pre class="overflow-scroll">{!log.logData}</pre></td>
+            </tr>
+        </apex:repeat>
+        </tbody>
+    </table>
+</apex:page>

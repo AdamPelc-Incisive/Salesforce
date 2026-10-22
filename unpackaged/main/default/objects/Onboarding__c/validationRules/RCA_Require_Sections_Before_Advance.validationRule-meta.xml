@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCA_Require_Sections_Before_Advance</fullName>
+    <active>true</active>
+    <description>On RCA onboardings, the Primary Root Cause (Section 3), at least one Specific Reason Code (Section 4), and a Remediation Action (Section 6) must be completed before the Stage can advance past Investigation. (INC3-35)</description>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &quot;RCA&quot;,
+    NOT(ISPICKVAL(Stage__c, &quot;Investigation&quot;)),
+    OR(
+        ISBLANK(TEXT(Primary_Root_Cause__c)),
+        ISBLANK(Specific_Reason_Codes__c),
+        ISBLANK(TEXT(Remediation_Action__c))
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Stage__c</errorDisplayField>
+    <errorMessage>Before advancing an RCA past Investigation, complete the Primary Root Cause (Section 3), at least one Specific Reason Code (Section 4), and a Remediation Action (Section 6).</errorMessage>
+</ValidationRule>

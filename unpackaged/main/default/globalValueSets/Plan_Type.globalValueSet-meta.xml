@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Scanner</fullName>
+        <default>false</default>
+        <label>Scanner</label>
+    </customValue>
+    <customValue>
+        <fullName>Lab-Only</fullName>
+        <default>false</default>
+        <label>Lab-Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Pilot</fullName>
+        <default>false</default>
+        <label>Pilot</label>
+    </customValue>
+    <customValue>
+        <fullName>Printer</fullName>
+        <default>false</default>
+        <label>Printer</label>
+    </customValue>
+    <masterLabel>Plan Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Organic Search</fullName>
+        <default>false</default>
+        <label>Organic Search</label>
+    </customValue>
+    <customValue>
+        <fullName>Paid Search</fullName>
+        <default>false</default>
+        <label>Paid Search</label>
+    </customValue>
+    <customValue>
+        <fullName>Email Marketing</fullName>
+        <default>false</default>
+        <label>Email Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Organic Social</fullName>
+        <default>false</default>
+        <label>Organic Social</label>
+    </customValue>
+    <customValue>
+        <fullName>Referrals</fullName>
+        <default>false</default>
+        <label>Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Campaigns</fullName>
+        <default>false</default>
+        <label>Other Campaigns</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Traffic</fullName>
+        <default>false</default>
+        <label>Direct Traffic</label>
+    </customValue>
+    <customValue>
+        <fullName>Offline Sources</fullName>
+        <default>false</default>
+        <label>Offline Sources</label>
+    </customValue>
+    <customValue>
+        <fullName>Paid Social</fullName>
+        <default>false</default>
+        <label>Paid Social</label>
+    </customValue>
+    <customValue>
+        <fullName>AI Referrals</fullName>
+        <default>false</default>
+        <label>AI Referrals</label>
+    </customValue>
+    <description>Default values from Hubspot for Original Source/Latest Source</description>
+    <masterLabel>Hubspot Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

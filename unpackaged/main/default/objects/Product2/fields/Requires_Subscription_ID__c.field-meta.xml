@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Subscription_ID__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If this product needs an associated Subscription ID when assigning</inlineHelpText>
+    <label>Requires Subscription ID</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

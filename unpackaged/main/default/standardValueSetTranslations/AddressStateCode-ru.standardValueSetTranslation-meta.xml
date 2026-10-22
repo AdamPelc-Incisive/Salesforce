@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Alabama</masterLabel>
+        <translation>Алабама</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alaska</masterLabel>
+        <translation>Аляска</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alberta</masterLabel>
+        <translation>Альберта</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arizona</masterLabel>
+        <translation>Аризона</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Arkansas</masterLabel>
+        <translation>Арканзас</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>British Columbia</masterLabel>
+        <translation>Британская Колумбия</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>California</masterLabel>
+        <translation>Калифорния</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Colorado</masterLabel>
+        <translation>Колорадо</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Connecticut</masterLabel>
+        <translation>Коннектикут</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delaware</masterLabel>
+        <translation>Делавэр</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>District of Columbia</masterLabel>
+        <translation>Округ Колумбия</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Florida</masterLabel>
+        <translation>Флорида</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Georgia</masterLabel>
+        <translation>Джорджия</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hawaii</masterLabel>
+        <translation>Гавайи</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Idaho</masterLabel>
+        <translation>Айдахо</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Illinois</masterLabel>
+        <translation>Иллинойс</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Indiana</masterLabel>
+        <translation>Индиана</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Iowa</masterLabel>
+        <translation>Айова</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kansas</masterLabel>
+        <translation>Канзас</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kentucky</masterLabel>
+        <translation>Кентукки</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Louisiana</masterLabel>
+        <translation>Луизиана</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maine</masterLabel>
+        <translation>Мэн</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Manitoba</masterLabel>
+        <translation>Манитоба</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maryland</masterLabel>
+        <translation>Мэриленд</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Massachusetts</masterLabel>
+        <translation>Массачусетс</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Michigan</masterLabel>
+        <translation>Мичиган</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Minnesota</masterLabel>
+        <translation>Миннесота</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mississippi</masterLabel>
+        <translation>Миссисипи</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Missouri</masterLabel>
+        <translation>Миссури</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Montana</masterLabel>
+        <translation>Монтана</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nebraska</masterLabel>
+        <translation>Небраска</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nevada</masterLabel>
+        <translation>Невада</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Brunswick</masterLabel>
+        <translation>Нью-Брансуик</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Hampshire</masterLabel>
+        <translation>Нью-Гемпшир</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Jersey</masterLabel>
+        <translation>Нью-Джерси</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Mexico</masterLabel>
+        <translation>Нью-Мексико</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New York</masterLabel>
+        <translation>Нью-Йорк</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Newfoundland and Labrador</masterLabel>
+        <translation>Ньюфаундленд и Лабрадор</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Carolina</masterLabel>
+        <translation>Северная Каролина</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>North Dakota</masterLabel>
+        <translation>Северная Дакота</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Northwest Territories</masterLabel>
+        <translation>Северо-Западная Территория</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nova Scotia</masterLabel>
+        <translation>Новая Шотландия</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nunavut</masterLabel>
+        <translation>Нунавут</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ohio</masterLabel>
+        <translation>Огайо</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oklahoma</masterLabel>
+        <translation>Оклахома</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ontario</masterLabel>
+        <translation>Онтарио</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oregon</masterLabel>
+        <translation>Орегон</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pennsylvania</masterLabel>
+        <translation>Пенсильвания</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prince Edward Island</masterLabel>
+        <translation>Остров Принца Эдуарда</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Quebec</masterLabel>
+        <translation>Квебек</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rhode Island</masterLabel>
+        <translation>Род-Айленд</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Saskatchewan</masterLabel>
+        <translation>Саскачеван</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Carolina</masterLabel>
+        <translation>Южная Каролина</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>South Dakota</masterLabel>
+        <translation>Южная Дакота</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tennessee</masterLabel>
+        <translation>Теннесси</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Texas</masterLabel>
+        <translation>Техас</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Utah</masterLabel>
+        <translation>Юта</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vermont</masterLabel>
+        <translation>Вермонт</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Virginia</masterLabel>
+        <translation>Вирджиния</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Washington</masterLabel>
+        <translation>Вашингтон</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>West Virginia</masterLabel>
+        <translation>Западная Виргиния</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wisconsin</masterLabel>
+        <translation>Висконсин</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wyoming</masterLabel>
+        <translation>Вайоминг</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Yukon Territories</masterLabel>
+        <translation>Территории Юкон</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

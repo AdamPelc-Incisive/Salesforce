@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Onboarding_Tasks__c</fullName>
+    <inlineHelpText>All tasks with any status except Not Needed</inlineHelpText>
+    <label>Total Onboarding Tasks</label>
+    <summaryFilterItems>
+        <field>Onboarding_Task__c.Status__c</field>
+        <operation>notEqual</operation>
+        <value>Not Needed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Onboarding_Task__c.Onboarding__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

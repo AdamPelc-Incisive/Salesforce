@@ -1,0 +1,40 @@
+<apex:page StandardController="Opportunity" extensions="pandadoc.PandaDocController" showHeader="false" sidebar="false" action="{!afterLoad}">
+    <c:SDKResources />
+    <apex:includeScript value="/support/console/44.0/integration.js"/>
+    <apex:includeScript value="{!URLFOR($Resource.pandadoc__SObjectMapper, '/pandaDocSetup.js')}" />
+
+    <style>
+        .pandadoc-doc-list {
+            width:100%;
+            height:395px;
+        }
+    </style>
+    <apex:form >
+        <apex:pageBlock title="PandaDoc Documents" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="New document" onclick="openCreateNewPage(); return false;"/>
+            </apex:pageBlockButtons>
+
+            <div id="pandadoc_list"></div>
+        </apex:pageBlock>
+    </apex:form>
+
+    <script type="text/javascript">
+        function openCreateNewPage() {
+            var navUrl = '{!JSENCODE(redirectToNewDocument.url)}';
+            window.pandaDocNavigate(navUrl);
+        }
+
+        var PANDADOC_DOCUMENT_DATA = JSON.parse("{!JSENCODE(recordIdMetadata)}");
+        PANDADOC_DOCUMENT_DATA.variables.map(variable => {
+            if (variable.type === 'money') {
+                variable.currency = variable.value.currency;
+                variable.value = variable.value.value;
+            }
+            return variable;
+        });
+
+        PandaDoc.Config.SDK_APP = '{!JSENCODE(PANDADOC_APP_HOST)}';
+        PandaDoc.Salesforce.setupDocList('#pandadoc_list', PANDADOC_DOCUMENT_DATA);
+    </script>
+</apex:page>

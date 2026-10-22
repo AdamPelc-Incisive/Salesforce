@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounter__c</fullName>
+    <description>Used to set Corporate IDs</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to set Corporate IDs</inlineHelpText>
+    <label>Accounter</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

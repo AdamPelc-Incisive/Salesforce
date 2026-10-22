@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specific_Reason_Codes__c</fullName>
+    <inlineHelpText>Specific reason codes for the at-risk situation. Available values depend on the selected Primary Root Cause.</inlineHelpText>
+    <label>Specific Reason Codes</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Primary_Root_Cause__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Camera or port failures</fullName>
+                <default>false</default>
+                <label>Camera or port failures</label>
+            </value>
+            <value>
+                <fullName>Graphics card / driver issue</fullName>
+                <default>false</default>
+                <label>Graphics card / driver issue</label>
+            </value>
+            <value>
+                <fullName>Scanner lag or button failures</fullName>
+                <default>false</default>
+                <label>Scanner lag or button failures</label>
+            </value>
+            <value>
+                <fullName>Connectivity / network issue</fullName>
+                <default>false</default>
+                <label>Connectivity / network issue</label>
+            </value>
+            <value>
+                <fullName>Software crashes</fullName>
+                <default>false</default>
+                <label>Software crashes</label>
+            </value>
+            <value>
+                <fullName>Defective unit</fullName>
+                <default>false</default>
+                <label>Defective unit</label>
+            </value>
+            <value>
+                <fullName>Repeat issues across multiple units</fullName>
+                <default>false</default>
+                <label>Repeat issues across multiple units</label>
+            </value>
+            <value>
+                <fullName>Incorrect scan sequence</fullName>
+                <default>false</default>
+                <label>Incorrect scan sequence</label>
+            </value>
+            <value>
+                <fullName>VDO / occlusion errors from workflow</fullName>
+                <default>false</default>
+                <label>VDO / occlusion errors from workflow</label>
+            </value>
+            <value>
+                <fullName>Staff not adopting scanner</fullName>
+                <default>false</default>
+                <label>Staff not adopting scanner</label>
+            </value>
+            <value>
+                <fullName>Doctor C&amp;B workflow preference mismatch</fullName>
+                <default>false</default>
+                <label>Doctor C&amp;B workflow preference mismatch</label>
+            </value>
+            <value>
+                <fullName>Insufficient training delivered</fullName>
+                <default>false</default>
+                <label>Insufficient training delivered</label>
+            </value>
+            <value>
+                <fullName>Workflow friction on removable cases</fullName>
+                <default>false</default>
+                <label>Workflow friction on removable cases</label>
+            </value>
+            <value>
+                <fullName>Scanner not fit for case mix</fullName>
+                <default>false</default>
+                <label>Scanner not fit for case mix</label>
+            </value>
+            <value>
+                <fullName>High occlusion on delivered cases</fullName>
+                <default>false</default>
+                <label>High occlusion on delivered cases</label>
+            </value>
+            <value>
+                <fullName>Tight interproximal contacts</fullName>
+                <default>false</default>
+                <label>Tight interproximal contacts</label>
+            </value>
+            <value>
+                <fullName>Short crowns / margin issues</fullName>
+                <default>false</default>
+                <label>Short crowns / margin issues</label>
+            </value>
+            <value>
+                <fullName>Missing items on case</fullName>
+                <default>false</default>
+                <label>Missing items on case</label>
+            </value>
+            <value>
+                <fullName>Esthetic inconsistency case-to-case</fullName>
+                <default>false</default>
+                <label>Esthetic inconsistency case-to-case</label>
+            </value>
+            <value>
+                <fullName>Remake rate above threshold</fullName>
+                <default>false</default>
+                <label>Remake rate above threshold</label>
+            </value>
+            <value>
+                <fullName>Rx / case notes not followed</fullName>
+                <default>false</default>
+                <label>Rx / case notes not followed</label>
+            </value>
+            <value>
+                <fullName>Lab acknowledged systemic quality issue</fullName>
+                <default>false</default>
+                <label>Lab acknowledged systemic quality issue</label>
+            </value>
+            <value>
+                <fullName>No case status visibility</fullName>
+                <default>false</default>
+                <label>No case status visibility</label>
+            </value>
+            <value>
+                <fullName>Portal usability / confusion</fullName>
+                <default>false</default>
+                <label>Portal usability / confusion</label>
+            </value>
+            <value>
+                <fullName>TAT expectation misalignment</fullName>
+                <default>false</default>
+                <label>TAT expectation misalignment</label>
+            </value>
+            <value>
+                <fullName>Contact info lost in migration</fullName>
+                <default>false</default>
+                <label>Contact info lost in migration</label>
+            </value>
+            <value>
+                <fullName>No designated lab point of contact</fullName>
+                <default>false</default>
+                <label>No designated lab point of contact</label>
+            </value>
+            <value>
+                <fullName>Phone / Slack unresponsive</fullName>
+                <default>false</default>
+                <label>Phone / Slack unresponsive</label>
+            </value>
+            <value>
+                <fullName>Reactive instead of proactive updates</fullName>
+                <default>false</default>
+                <label>Reactive instead of proactive updates</label>
+            </value>
+            <value>
+                <fullName>New lab portal rollout disruption</fullName>
+                <default>false</default>
+                <label>New lab portal rollout disruption</label>
+            </value>
+            <value>
+                <fullName>Pace mismatch (too slow/structured)</fullName>
+                <default>false</default>
+                <label>Pace mismatch (too slow/structured)</label>
+            </value>
+            <value>
+                <fullName>Workflow capability gap</fullName>
+                <default>false</default>
+                <label>Workflow capability gap</label>
+            </value>
+            <value>
+                <fullName>Specialty mismatch</fullName>
+                <default>false</default>
+                <label>Specialty mismatch</label>
+            </value>
+            <value>
+                <fullName>Lab declined to continue account</fullName>
+                <default>false</default>
+                <label>Lab declined to continue account</label>
+            </value>
+            <value>
+                <fullName>Volume mismatch</fullName>
+                <default>false</default>
+                <label>Volume mismatch</label>
+            </value>
+            <value>
+                <fullName>No IT setup at start</fullName>
+                <default>false</default>
+                <label>No IT setup at start</label>
+            </value>
+            <value>
+                <fullName>Pricing/minimums miscommunicated</fullName>
+                <default>false</default>
+                <label>Pricing/minimums miscommunicated</label>
+            </value>
+            <value>
+                <fullName>Account not properly qualified at sale</fullName>
+                <default>false</default>
+                <label>Account not properly qualified at sale</label>
+            </value>
+            <value>
+                <fullName>Workflow training incomplete</fullName>
+                <default>false</default>
+                <label>Workflow training incomplete</label>
+            </value>
+            <value>
+                <fullName>Practice unaware of Incisive at sale</fullName>
+                <default>false</default>
+                <label>Practice unaware of Incisive at sale</label>
+            </value>
+            <value>
+                <fullName>Former Dandy not transitioned properly</fullName>
+                <default>false</default>
+                <label>Former Dandy not transitioned properly</label>
+            </value>
+            <value>
+                <fullName>Lab routing not configured correctly</fullName>
+                <default>false</default>
+                <label>Lab routing not configured correctly</label>
+            </value>
+            <value>
+                <fullName>Minimum spend/shortfall fee concern</fullName>
+                <default>false</default>
+                <label>Minimum spend/shortfall fee concern</label>
+            </value>
+            <value>
+                <fullName>Competitor pricing materially lower</fullName>
+                <default>false</default>
+                <label>Competitor pricing materially lower</label>
+            </value>
+            <value>
+                <fullName>Per-case pricing transparency</fullName>
+                <default>false</default>
+                <label>Per-case pricing transparency</label>
+            </value>
+            <value>
+                <fullName>Bundle / scanner cost concerns</fullName>
+                <default>false</default>
+                <label>Bundle / scanner cost concerns</label>
+            </value>
+            <value>
+                <fullName>Minimum spend chronically not met</fullName>
+                <default>false</default>
+                <label>Minimum spend chronically not met</label>
+            </value>
+            <value>
+                <fullName>Billing dispute unresolved</fullName>
+                <default>false</default>
+                <label>Billing dispute unresolved</label>
+            </value>
+            <value>
+                <fullName>Ownership change / corporate purchase</fullName>
+                <default>false</default>
+                <label>Ownership change / corporate purchase</label>
+            </value>
+            <value>
+                <fullName>Staffing change (key user left)</fullName>
+                <default>false</default>
+                <label>Staffing change (key user left)</label>
+            </value>
+            <value>
+                <fullName>Practice strategy shift</fullName>
+                <default>false</default>
+                <label>Practice strategy shift</label>
+            </value>
+            <value>
+                <fullName>DSO / pilot program ending</fullName>
+                <default>false</default>
+                <label>DSO / pilot program ending</label>
+            </value>
+            <value>
+                <fullName>Practice acquired or closing</fullName>
+                <default>false</default>
+                <label>Practice acquired or closing</label>
+            </value>
+            <value>
+                <fullName>Doctor preference change (non-Incisive)</fullName>
+                <default>false</default>
+                <label>Doctor preference change (non-Incisive)</label>
+            </value>
+            <value>
+                <fullName>Dandy</fullName>
+                <default>false</default>
+                <label>Dandy</label>
+            </value>
+            <value>
+                <fullName>Local lab and practice-owned scanner</fullName>
+                <default>false</default>
+                <label>Local lab and practice-owned scanner</label>
+            </value>
+            <value>
+                <fullName>Other digital workflow vendor</fullName>
+                <default>false</default>
+                <label>Other digital workflow vendor</label>
+            </value>
+            <value>
+                <fullName>Direct manufacturer purchase</fullName>
+                <default>false</default>
+                <label>Direct manufacturer purchase</label>
+            </value>
+            <value>
+                <fullName>Returned to analog workflow</fullName>
+                <default>false</default>
+                <label>Returned to analog workflow</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Camera or port failures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Graphics card / driver issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Scanner lag or button failures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Connectivity / network issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Software crashes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Defective unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Hardware</controllingFieldValue>
+            <valueName>Repeat issues across multiple units</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Incorrect scan sequence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>VDO / occlusion errors from workflow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Staff not adopting scanner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Doctor C&amp;B workflow preference mismatch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Insufficient training delivered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Workflow friction on removable cases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scanner Workflow</controllingFieldValue>
+            <valueName>Scanner not fit for case mix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>High occlusion on delivered cases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Tight interproximal contacts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Short crowns / margin issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Missing items on case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Esthetic inconsistency case-to-case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Remake rate above threshold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Rx / case notes not followed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Quality</controllingFieldValue>
+            <valueName>Lab acknowledged systemic quality issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>No case status visibility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>Portal usability / confusion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>TAT expectation misalignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>Contact info lost in migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>No designated lab point of contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>Phone / Slack unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>Reactive instead of proactive updates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Communication</controllingFieldValue>
+            <valueName>New lab portal rollout disruption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Fit</controllingFieldValue>
+            <valueName>Pace mismatch (too slow/structured)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Fit</controllingFieldValue>
+            <valueName>Workflow capability gap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Fit</controllingFieldValue>
+            <valueName>Specialty mismatch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Fit</controllingFieldValue>
+            <valueName>Lab declined to continue account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Fit</controllingFieldValue>
+            <valueName>Volume mismatch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>No IT setup at start</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Pricing/minimums miscommunicated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Account not properly qualified at sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Workflow training incomplete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Practice unaware of Incisive at sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Former Dandy not transitioned properly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding Gap</controllingFieldValue>
+            <valueName>Lab routing not configured correctly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Minimum spend/shortfall fee concern</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Competitor pricing materially lower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Per-case pricing transparency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Bundle / scanner cost concerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Minimum spend chronically not met</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial / Pricing</controllingFieldValue>
+            <valueName>Billing dispute unresolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>Ownership change / corporate purchase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>Staffing change (key user left)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>Practice strategy shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>DSO / pilot program ending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>Practice acquired or closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Practice-Side Change</controllingFieldValue>
+            <valueName>Doctor preference change (non-Incisive)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitive Displacement</controllingFieldValue>
+            <valueName>Dandy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitive Displacement</controllingFieldValue>
+            <valueName>Local lab and practice-owned scanner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitive Displacement</controllingFieldValue>
+            <valueName>Other digital workflow vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitive Displacement</controllingFieldValue>
+            <valueName>Direct manufacturer purchase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitive Displacement</controllingFieldValue>
+            <valueName>Returned to analog workflow</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

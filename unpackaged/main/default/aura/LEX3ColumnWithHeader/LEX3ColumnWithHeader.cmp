@@ -1,0 +1,41 @@
+<aura:component implements="lightning:recordHomeTemplate" access="global">
+    <aura:attribute name="header" type="Aura.Component[]"/>
+    <aura:attribute name="leftColumn" type="Aura.Component[]"/>
+    <aura:attribute name="centerColumn" type="Aura.Component[]"/>
+    <aura:attribute name="rightColumn" type="Aura.Component[]"/>
+    
+    <!-- Header Region -->
+    <lightning:layout>
+        <lightning:layoutItem size="12" padding="around-small">
+            {!v.header}
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+    <!-- Three Column Region (3-6-3 on desktop, stacked on mobile) -->
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem 
+            size="12" 
+            smallDeviceSize="12" 
+            mediumDeviceSize="3" 
+            largeDeviceSize="3" 
+            padding="around-small">
+            {!v.leftColumn}
+        </lightning:layoutItem>
+        <lightning:layoutItem 
+            size="12" 
+            smallDeviceSize="12" 
+            mediumDeviceSize="6" 
+            largeDeviceSize="6" 
+            padding="around-small">
+            {!v.centerColumn}
+        </lightning:layoutItem>
+        <lightning:layoutItem 
+            size="12" 
+            smallDeviceSize="12" 
+            mediumDeviceSize="3" 
+            largeDeviceSize="3" 
+            padding="around-small">
+            {!v.rightColumn}
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Incisive_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If the account needs an Trios Email added to it when they have this product</inlineHelpText>
+    <label>Requires 3Shape Email</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

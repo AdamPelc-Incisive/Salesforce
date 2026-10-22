@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_for_Onboarding_Type__c</fullName>
+    <inlineHelpText>The type of onboarding that this task applies to</inlineHelpText>
+    <label>Required for Onboarding Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Onboarding_Type</valueSetName>
+    </valueSet>
+</CustomField>

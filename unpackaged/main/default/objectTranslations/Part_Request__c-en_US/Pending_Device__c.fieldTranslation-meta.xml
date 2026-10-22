@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Pending Device --></label>
+        <name>Pending_Device__c</name>
+        <relationshipLabel><!-- Part Requests --></relationshipLabel>
+    </CustomFieldTranslation>

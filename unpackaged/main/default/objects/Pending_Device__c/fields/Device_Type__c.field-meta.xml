@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Device_Type__c</fullName>
+    <description>Name of the related product - pulled from opportunity product or direct product lookup for part requests</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(TEXT(Type__c) = &quot;Part Request&quot;, TEXT(Type__c) = &quot;Exchange&quot;), Requested_Part__r.Name, Opportunity_Product__r.PricebookEntry.Product2.Name)</formula>
+    <label>Device Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

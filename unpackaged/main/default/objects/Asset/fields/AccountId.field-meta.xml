@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountId</fullName>
+    <description>[PORTAL] Resolves which Practice an Asset belongs to (equipment.practice_id). Confirm with RevOps before changing.</description>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.ParentId</field>
+            <operation>notEqual</operation>
+            <value />
+        </filterItems>
+        <infoMessage>Defaults to practice accounts</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

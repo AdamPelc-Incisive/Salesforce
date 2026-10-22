@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This field identifies the user who created the document, not the integration user stored in the standard &apos;Created By&apos; field. --></help>
+        <label><!-- PandaDoc Created By --></label>
+        <name>pandadoc__CreatedBy__c</name>
+        <relationshipLabel><!-- PandaDoc Documents --></relationshipLabel>
+    </CustomFieldTranslation>

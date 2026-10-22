@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clinical_Email__c</fullName>
+    <description>[PORTAL] Synced to Incisive Portal (dental_practices.clinical_email); also used to select the practice&#39;s primary email. Confirm with RevOps before changing.</description>
+    <externalId>false</externalId>
+    <label>Clinical Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

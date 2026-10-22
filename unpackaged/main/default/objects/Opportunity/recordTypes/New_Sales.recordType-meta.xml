@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Sales</fullName>
+    <active>true</active>
+    <businessProcess>New Sales</businessProcess>
+    <label>New Sales</label>
+    <picklistValues>
+        <picklist>Close_Reason__c</picklist>
+        <values>
+            <fullName>Already owns scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chose competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed to single lab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive displacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital workflow support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geographic limitations %28i%2Ee%2E%2C Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient restorative volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal decision-making</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lab choice flexibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No upfront scanner cost %E2%80%93 Adding Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No upfront scanner cost %E2%80%93 First IOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-negotiated pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefers analog</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commitment_Structure__c</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitors__c</picklist>
+        <values>
+            <fullName>Competitor A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Term__c</picklist>
+        <values>
+            <fullName>12 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 Months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Existing_Scanner_Type__c</picklist>
+        <values>
+            <fullName>Dandy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrimeScan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sirios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iTero</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Existing_Scanners_in_Office__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expected_Product_Type__c</picklist>
+        <values>
+            <fullName>AOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aligners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Esthetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ortho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removables</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard C%26B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Forecast_Status__c</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Likely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Solid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Latest_Source__c</picklist>
+        <values>
+            <fullName>AI Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline Sources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Original_Source__c</picklist>
+        <values>
+            <fullName>AI Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline Sources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Rep_Org__c</picklist>
+        <values>
+            <fullName>Align</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClearCorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neodent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Straumann Group</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Plan_Type__c</picklist>
+        <values>
+            <fullName>Lab-Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reconcilliation_Period__c</picklist>
+        <values>
+            <fullName>6 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Scanner_Brand__c</picklist>
+        <values>
+            <fullName>Align</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clear Correct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neodent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthobrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Straumann</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

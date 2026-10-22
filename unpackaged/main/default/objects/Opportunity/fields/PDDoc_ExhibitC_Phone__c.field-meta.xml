@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDDoc_ExhibitC_Phone__c</fullName>
+    <description>PandaDoc Exhibit C key contact phone — seeded from primary contact, may be overridden</description>
+    <label>PDDoc Exhibit C Phone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

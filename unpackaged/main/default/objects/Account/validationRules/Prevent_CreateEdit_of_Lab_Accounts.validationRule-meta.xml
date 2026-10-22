@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_CreateEdit_of_Lab_Accounts</fullName>
+    <active>true</active>
+    <description>Users need to have special permissions to create/edit accounts with Type=Lab</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(Type, &#39;Lab&#39;),
+  NOT($Permission.Can_Create_Edit_Lab_Accounts),
+  NOT(CONTAINS($Profile.Name, &#39;Admin&#39;)),
+  NOT(CONTAINS($Profile.Name, &#39;Integration&#39;))
+)</errorConditionFormula>
+    <errorMessage>No permission to create/edit an Account with Type=Lab</errorMessage>
+</ValidationRule>

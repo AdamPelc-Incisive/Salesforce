@@ -1,0 +1,29 @@
+<aura:component implements="lightning:appHomeTemplate" description="Lock 8 - Top 60/40, Bottom Full Width">
+
+    <!-- Top Left: 75% -->
+    <aura:attribute name="topLeft" type="Aura.Component[]" />
+    <!-- Top Right: 25% -->
+    <aura:attribute name="topRight" type="Aura.Component[]" />
+    <!-- Bottom: 100% -->
+    <aura:attribute name="bottom" type="Aura.Component[]" />
+
+    <div class="l8-template">
+
+        <!-- Top Row: 60/40 -->
+        <div class="l8-top-row">
+            <div class="l8-top-left">
+                {!v.topLeft}
+            </div>
+            <div class="l8-top-right">
+                {!v.topRight}
+            </div>
+        </div>
+
+        <!-- Bottom Row: Full Width -->
+        <div class="l8-bottom-row">
+            {!v.bottom}
+        </div>
+
+    </div>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Not_On_Account__c</fullName>
+    <formula>ISBLANK(AccountId)</formula>
+    <inlineHelpText>True if contact is not associated with an account</inlineHelpText>
+    <label>Contact Not On Account</label>
+    <type>Checkbox</type>
+</CustomField>

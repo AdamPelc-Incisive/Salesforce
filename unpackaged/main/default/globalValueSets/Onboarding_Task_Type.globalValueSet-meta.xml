@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Pre-Training</fullName>
+        <default>false</default>
+        <label>Pre-Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Hardware Training</fullName>
+        <default>false</default>
+        <label>Hardware Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Training</fullName>
+        <default>false</default>
+        <label>Workflow Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Post-Training</fullName>
+        <default>false</default>
+        <label>Post-Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Onboarded</fullName>
+        <default>false</default>
+        <label>Onboarded</label>
+    </customValue>
+    <customValue>
+        <fullName>Investigation</fullName>
+        <default>false</default>
+        <label>Investigation</label>
+    </customValue>
+    <customValue>
+        <fullName>Remediation</fullName>
+        <default>false</default>
+        <label>Remediation</label>
+    </customValue>
+    <customValue>
+        <fullName>Verification</fullName>
+        <default>false</default>
+        <label>Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+    </customValue>
+    <masterLabel>Onboarding Task Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

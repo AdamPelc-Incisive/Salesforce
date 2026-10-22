@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Open_RCAs__c</fullName>
+    <label>Number of Open RCAs</label>
+    <summaryFilterItems>
+        <field>Onboarding__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>RCA</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Onboarding__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<design:component label="Header with Three Columns (3-6-3)">
+    <flexipage:template>
+        <flexipage:region name="header" defaultWidth="LARGE" />
+        <flexipage:region name="leftColumn" defaultWidth="SMALL" />
+        <flexipage:region name="centerColumn" defaultWidth="LARGE" />
+        <flexipage:region name="rightColumn" defaultWidth="SMALL" />
+    </flexipage:template>
+    <design:supportedFormFactors>
+        <design:supportedFormFactor type="Large"/>
+        <design:supportedFormFactor type="Small"/>
+    </design:supportedFormFactors>
+</design:component>

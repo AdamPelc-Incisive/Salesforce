@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_for_Lab_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When checked, this task is only created if the onboarding has no related Pending Devices (lab-only / no-scanner).</inlineHelpText>
+    <label>Required for Lab Only Onboardings</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

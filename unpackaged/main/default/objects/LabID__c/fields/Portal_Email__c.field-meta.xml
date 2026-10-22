@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Email__c</fullName>
+    <description>[PORTAL: VERIFY] Possible Portal dependency, not confirmed. Check with RevOps before changing or deleting.</description>
+    <externalId>false</externalId>
+    <label>Portal Email</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

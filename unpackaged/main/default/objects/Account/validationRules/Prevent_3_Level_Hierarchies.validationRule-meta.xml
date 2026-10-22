@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_3_Level_Hierarchies</fullName>
+    <active>true</active>
+    <description>We don&#39;t want more than 2 levels of accounts</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(ParentId)),
+  NOT(ISBLANK(Parent.ParentId))
+)</errorConditionFormula>
+    <errorMessage>Hey there - the account you&#39;re putting this underneath already has a parent account associated with it.  We don&#39;t want to have anymore than a 2 level hierarchy</errorMessage>
+</ValidationRule>

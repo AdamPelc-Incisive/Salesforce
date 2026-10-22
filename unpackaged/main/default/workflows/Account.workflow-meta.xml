@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <outboundMessages>
+        <fullName>FrontLiveSyncAccount_1489886</fullName>
+        <apiVersion>66.0</apiVersion>
+        <endpointUrl>https://webhook.frontapp.com/apps/salesforce2/webhook?secret=U6rHrNN0O2kzNvVdoV7f1q_fp7s4fKu-Fds4YESqC4SvEYBLsVRgvFrxaaCWIc94PYAF59jxVLh73YV7nyZxUQp8bLpWlg</endpointUrl>
+        <fields>Clinical_Email__c</fields>
+        <fields>Id</fields>
+        <fields>LastModifiedDate</fields>
+        <fields>Name</fields>
+        <fields>Phone</fields>
+        <fields>Practice_ID__c</fields>
+        <fields>Status__c</fields>
+        <fields>Website</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>gent@lock8partners.com.incisive</integrationUser>
+        <name>Front Live Sync Account</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>FrontLiveSyncAccountRule_1489886</fullName>
+        <actions>
+            <name>FrontLiveSyncAccount_1489886</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>Triggers Front Live Sync on Account changes.</description>
+        <formula>ISNEW() || ISCHANGED(Name) || ISCHANGED(Website) || ISCHANGED(Practice_ID__c) || ISCHANGED(Clinical_Email__c) || ISCHANGED(Phone) || ISCHANGED(Status__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

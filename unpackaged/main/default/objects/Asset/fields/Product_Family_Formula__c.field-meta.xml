@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Family_Formula__c</fullName>
+    <description>[PORTAL] Used to filter which Assets sync to Incisive Portal (= &#39;Scanner&#39;). Not stored downstream, but changing may break sync logic.</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Product2.Family)</formula>
+    <inlineHelpText>Pulled from Product; for datatables in flow</inlineHelpText>
+    <label>Product Family (Formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

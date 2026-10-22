@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If Asset is not assigned defaults to Pending Assignment; copies over from Asset&apos;s status once a device has been assigned --></help>
+        <label><!-- Assigned Asset Status --></label>
+        <name>Assigned_Asset_Status__c</name>
+    </CustomFieldTranslation>

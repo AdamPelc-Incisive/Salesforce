@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Trios</fullName>
+        <default>false</default>
+        <label>Trios</label>
+    </customValue>
+    <customValue>
+        <fullName>iTero</fullName>
+        <default>false</default>
+        <label>iTero</label>
+    </customValue>
+    <customValue>
+        <fullName>PrimeScan</fullName>
+        <default>false</default>
+        <label>PrimeScan</label>
+    </customValue>
+    <customValue>
+        <fullName>Medit</fullName>
+        <default>false</default>
+        <label>Medit</label>
+    </customValue>
+    <customValue>
+        <fullName>Shining</fullName>
+        <default>false</default>
+        <label>Shining</label>
+    </customValue>
+    <customValue>
+        <fullName>Sirios</fullName>
+        <default>false</default>
+        <label>Sirios</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Dandy</fullName>
+        <default>false</default>
+        <label>Dandy</label>
+    </customValue>
+    <masterLabel>Scanner Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

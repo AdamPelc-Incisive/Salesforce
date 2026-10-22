@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Canada</masterLabel>
+        <translation>カナダ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>United States</masterLabel>
+        <translation>アメリカ</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

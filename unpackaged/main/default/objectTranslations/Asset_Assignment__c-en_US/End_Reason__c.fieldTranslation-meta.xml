@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- End Reason --></label>
+        <name>End_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exchanged</masterLabel>
+            <translation><!-- Exchanged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost / Stolen</masterLabel>
+            <translation><!-- Lost / Stolen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired</masterLabel>
+            <translation><!-- Retired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Returned</masterLabel>
+            <translation><!-- Returned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Returned to Manufacturer</masterLabel>
+            <translation><!-- Returned to Manufacturer --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

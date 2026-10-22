@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The date the account was flagged at risk. Baseline for RCA cycle-time metrics (RCA analog of Sign Date). --></help>
+        <label><!-- Date Risk Detected --></label>
+        <name>Date_Risk_Detected__c</name>
+    </CustomFieldTranslation>

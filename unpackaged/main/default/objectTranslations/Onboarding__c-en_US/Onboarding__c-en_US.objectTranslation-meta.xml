@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboardings</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Onboarding RCA Layout</layout>
+        <sections>
+            <label><!-- RCA Progress --></label>
+            <section>RCA Progress</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Task --></label>
+        <name>Add_Task</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Assign Tasks --></label>
+        <name>Assign_Tasks</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>New_Task</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Downgrade --></label>
+        <name>Downgrade</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Exchange --></label>
+        <name>Exchange</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expansion --></label>
+        <name>Expansion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Sales --></label>
+        <name>New_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- At-risk account root cause analysis workflow. Stages: Investigation, Remediation, Verification, Closed. (INC3-30) --></description>
+        <label><!-- RCA --></label>
+        <name>RCA</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Before advancing an RCA past Investigation, complete the Primary Root Cause (Section 3), at least one Specific Reason Code (Section 4), and a Remediation Action (Section 6). --></errorMessage>
+        <name>RCA_Require_Sections_Before_Advance</name>
+    </validationRules>
+</CustomObjectTranslation>

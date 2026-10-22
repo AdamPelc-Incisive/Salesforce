@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Stamps the Churn Date on a Dental Product and Lab record when it is updated to Status &quot;Lab Churn&quot; while Churn Date is still blank, so CS leadership can report on lab churn events by time period without cross-object reports. Runs before save (fast field update) to avoid a second DML. Entry criteria require a blank Churn Date (update only, not create), so the original churn date is preserved if the record re-enters Lab Churn later. (INC3-13)</description>
+    <masterLabel>Dental Product and Lab - Before - Stamp Lab Churn Date</masterLabel>
+</FlowDefinition>

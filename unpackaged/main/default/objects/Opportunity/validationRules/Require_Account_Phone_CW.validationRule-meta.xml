@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Account_Phone_CW</fullName>
+    <active>true</active>
+    <description>OPS-241. Blocks Closed Won on a practice-level opportunity whose Account has no Phone. Scoped to Account_Level__c = Practice; inert while the field is blank.</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(StageName, &quot;Closed Won&quot;),
+  TEXT(Account.Account_Level__c) = &quot;Practice&quot;,
+  ISBLANK(Account.Phone)
+)</errorConditionFormula>
+    <errorMessage>Cannot mark Closed Won: the Account is missing a Phone Number. Add it on the Close screen, or update the Account directly.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Utility Bar Screen Flow that allows users to quickly create a new Contact by capturing key fields, creating the Contact record, and presenting a success screen with a direct link to the newly created Contact.</description>
+    <masterLabel>Contact - Screenflow - New Contact</masterLabel>
+</FlowDefinition>
